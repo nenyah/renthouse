@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>校园租 - 首页</title>
+        <link rel="stylesheet" href="{% static 'css/semantic.css' %}" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="{% static 'css/CampusRenting-LandingPage.css' %}" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+        <script src="{% static 'js/vue1.js' %}"></script>
+        <script src="{% static 'js/reqwest.js' %}"></script>
+        <script src="{% static 'js/js.cookie.js' %}"></script>
+    </head>
+
+    <body id="app" style="overflow: scroll;" >
+        <!-- login & register -->
+        {% include "register.html" %}
+        {% include "login.html" %}
+<!-- - - - - - - - - - - - - - - - - banner - - - - - - - - - - - - - - - - -->
+        <div class="ui vertical basic segment banner">
+    <!-- - - - - - - - - - - - - masterhead - - - - - - - - - - - - -->
+            <div class="ui vertical segment masterhead">
+                <div class="ui text menu in-masterhead">
+                    <!-- CampusRenting logo-image -->
+                    <a class="image-logo in-menu-masterhead" href="{% url 'index' %}">
+                        <img src="{% static 'image/租房项目切图/1首页/logo.png' %}" alt="" />
+                    </a>
+                    <!-- CampusRenting logo-text -->
+                    <a class="text-logo in-menu-masterhead" href="{% url 'index' %}">校园租</a>
+                    <!-- right menu -->
+                    <div class="ui right text menu in-menu-masterhead" style="position: relative">
+                        {% if request.user.is_authenticated %}
+                            <img src="/upload/{{ request.user.user_info.avatar }}" alt="" class="ui avatar image" />
+                            <span style="position: relative; top: 15%; margin-left: 5px; color: #FFF; font-size: 1.2rem; font-weight: 700">{{ request.user.user_info.name }}</span>
+                            <div class="ui circular button" style="width: 100px; height: 33px; margin-left: 20px; padding-top: 0; padding-bottom: 0; background-color: #fcc416; line-height: 33px" >
+                                <a href="{% url 'logout' %}" class="text-register in-menu-masterhead">退出</a>
+                            </div>
+                        {% else %}
+                            <!-- login -->
+                            <a @click="loginModalSwitch" class="text-login in-menu-masterhead">登录</a>
+                            <!-- register button -->
+                            <a @click="registerModalSwitch" class="ui circular button in-menu-masterhead">
+                                <img class="image-key in-menu-masterhead" src="{% static 'image/租房项目切图/1首页/key_icon.png' %}" alt="" />
+                                <span class="text-register in-menu-masterhead">注册</span>
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% verbatim %}
+    <!-- - - - - - - - - - - - - searchpanel - - - - - - - - - - - - -->
+            <div class="ui vertical basic segment seachpanel">
+                <div class="ui container searchpanel">
+                    <form action="{% url 'list' %}" method="get">
+                        <div class="ui borderless menu in-searchpanel">
+                            <!-- searchbox -->
+                            <div class="ui search selection dropdown in-searchpanel" >
+                                <div class="ui form">
+                                    <div class="field">
+                                        <select v-model="selected" name="area" style="height: 63px;-moz-appearance: none;-webkit-appearance: none;">
+                                            <option v-for="area in area_list" v-bind:value="area.id">{{ area.name }}</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- searchbutton -->
+                            <button @click="to_list(selected)" type="submit" class="ui button in-searchpanel">
+                                搜索
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            {% endverbatim %}
+        </div>
+<!-- - - - - - - - - - - - - - - displaywindow - - - - - - - - - - - - - - -->
+        {% verbatim %}
+        <div class="ui vertical basic segment displaywindow">
+            <div class="ui container displaywindow">
+                <!-- first row -->
+                <h1 class="ui header in-displaywindow">精选优质房源</h1>
+                <div class="ui center aligned three column grid in-displaywindow">
+
+                        <div v-if="excellentFiltered" class="left aligned column in-displaywindow">
+                            <div v-for="house in excellentFiltered" class="ui card in-displaywindow">
+                                <a class="image in-card">
+                                    <a class="label in-card">{{ house.label }}</a>
+                                    <img v-bind:src="house.pic_max" alt="" style="height: 114px" />
+                                </a>
+                                <div class="content in-card">
+                                    <a class="header in-card" @click="to_detail(house.id)" target="_blank">{{ house.area_to[0].name }}附近房源</a>
+                                    <div class="ui divider in-card"></div>
+                                    <div class="description in-card">
+                                        {{ house.houseIntroduce }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div v-else style="padding: 1rem; font-size: 36px; line-height: 228px">
+                            对不起，目前无优质精选房源
+                        </div>
+
+
+                </div>
+                <!-- second row -->
+                <h1 class="ui header in-displaywindow">毗邻学校周边</h1>
+                <div class="ui center aligned three column grid in-displaywindow">
+
+                        <div v-if="nearFiltered" class="left aligned column in-displaywindow">
+                            <div v-for="near_area in nearFiltered" class="ui card in-displaywindow">
+                                <div class="image in-card">
+                                    <img v-bind:src="near_area.pic_max" alt="" style="height: 114px" />
+                                </div>
+                                <div class="content in-card">
+                                    <a class="header in-card" @click="to_list(near_area.id)" target="_blank">{{ near_area.area_to[0].name }}附近房源</a>
+                                    <div class="ui divider in-card"></div>
+                                    <div class="description in-card">
+                                        {{ near_area.area_to[0].introduce }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div v-else style="padding: 1rem; font-size: 36px; line-height: 228px">
+                            对不起，您附近没有学校
+                        </div>
+
+
+                </div>
+            </div>
+
+        </div>
+        {% endverbatim %}
+<!-- - - - - - - - - - - - - - - - - footer - - - - - - - - - - - - - - - - -->
+        <div class="ui vertical segment footer">
+            <div class="ui container footer">
+                <div class="ui grid footer">
+                    <!-- firt column -->
+                    <div class="four wide column in-footer">
+                        <div class="ui vertical text menu in-footer">
+                            <div class="item header-in-menu-footer">
+                                <h3 class="ui header">关于我们</h3>
+                            </div>
+                            <div class="item in-menu-footer">常见问题</div>
+                            <div class="item in-menu-footer">联系我们</div>
+                            <div class="item in-menu-footer">加入我们</div>
+                        </div>
+                    </div>
+                    <!-- second column -->
+                    <div class="four wide column in-footer" style="padding-left: 31px;">
+                        <div class="ui vertical text menu in-footer">
+                            <div class="item header-in-menu-footer">
+                                <h3 class="ui header">热门房源</h3>
+                            </div>
+                            <div class="item in-menu-footer">北京大学</div>
+                            <div class="item in-menu-footer">清华大学</div>
+                            <div class="item in-menu-footer">人民大学</div>
+                            <div class="item in-menu-footer">北京邮电</div>
+                        </div>
+                    </div>
+                    <!-- third column -->
+                    <div class="four wide column in-footer" style="padding-left: 62px;">
+                        <div class="ui vertical text menu in-footer">
+                            <div class="item header-in-menu-footer">
+                                <h3 class="ui header">关注我们</h3>
+                            </div>
+                            <div class="item in-menu-footer">关注微信</div>
+                            <div class="item in-menu-footer">关注微薄</div>
+                            <div class="item in-menu-footer">关注头条号</div>
+                            <div class="item in-menu-footer">关注知乎</div>
+                        </div>
+                    </div>
+                    <!-- fourth column -->
+                    <div class="four wide column in-footer" style="padding-left: 93px;">
+                        <div class="ui vertical text menu in-footer">
+                            <div class="item header-in-menu-footer">
+                                <h3 class="ui header">反馈问题</h3>
+                            </div>
+                            <div class="item in-menu-footer" style="line-height: 150%;">
+                                欢迎写邮件向我们反馈<br />
+                                邮箱地址：<br />
+                                hi@mugglecoding.com
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui divider in-footer"></div>
+                <div class="text-left in-footer">
+                    Developed by Mugglecoding team catcuts
+                </div>
+                <div class="text-right in-footer">
+                    京ICP备15047012号-2
+                </div>
+            </div>
+        </div>
+        <script>
+         var vm = new Vue({
+            el:"#app",
+            data:{
+                selected: '1',
+                modalControl:{
+                    loginmodal:{
+                        show:false,
+                    },
+                    registermodal:{
+                        show:false,
+                    }
+                },
+                field:"12345",
+                area_list:[],
+                house_list:[],
+            },
+            methods:{
+                to_detail:function (id) {
+                    window.location.href="/detail/"+id;
+                },
+                to_list:function (id) {
+                    window.location.href="/list/";
+                },
+                loginModalSwitch:function () {
+                    this.modalControl.loginmodal.show = !this.modalControl.loginmodal.show;
+                },
+                registerModalSwitch:function () {
+                    this.modalControl.registermodal.show = !this.modalControl.registermodal.show;
+                },
+                loginModalClose:function () {
+                    this.modalControl.loginmodal.show = false;
+                },
+                registerModalClose:function () {
+                    this.modalControl.registermodal.show = false;
+                },
+                // 获取学校数据传给 area_list
+                getAreaList:function () {
+                    var self = this;
+
+                    reqwest({
+                        url:'/api/areas/',
+                        type:'json',
+                        method:'get',
+
+                        success:function (resp) {
+                            // console.log(resp);
+                            self.area_list = resp;
+                        },
+                    })
+                },
+                // 获取房源数据传给 house_list
+                getHouseList:function () {
+                    var self = this;
+
+                    reqwest({
+                        url:'/api/houses/',
+                        type:'json',
+                        method:'get',
+
+                        success:function (resp) {
+                            // console.log(resp);
+                            self.house_list = resp;
+                            console.log(self.house_list);
+                        },
+                    })
+                }
+            },
+            computed:{
+                loginfadeInOut:function () {
+                    if (this.modalControl.loginmodal.show) {
+                        return 'fadeIn'
+                    } else {
+                        return 'fadeOut'
+                    }
+                },
+                registerfadeInOut:function () {
+                    if (this.modalControl.registermodal.show) {
+                        return 'fadeIn'
+                    } else {
+                        return 'fadeOut'
+                    }
+                },
+                // 过滤 附近房源
+                nearFiltered:function () {
+                    var self = this
+
+                    var newList = self.house_list.sort(function (x, y) {
+                        if (x.distance < y.distance) {
+                            return -1;
+                        }
+                        if (x.distance > y.distance) {
+                            return 1;
+                        }
+                        return 0;
+                       });
+                    if (newList) {
+                        return newList.slice(0,3);
+                    }
+                    return null;
+
+                },
+                // 过滤 优质房源
+                excellentFiltered:function () {
+                    var self = this
+                    var newList = self.house_list.sort(function (x, y) {
+                            if (x.rent < y.rent) {
+                                return -1;
+                            }
+                            if (x.rent > y.rent) {
+                                return 1;
+                            }
+                            return 0;
+                        });
+
+                        if (newList) {
+                            return newList.slice(0,3);
+                        }
+                        return null;
+                }
+            },
+            // 网页加载时传入数据
+            ready:function () {
+                this.getAreaList();
+                this.getHouseList();
+            }
+         })
+        </script>
+    </body>
+</html>

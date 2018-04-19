@@ -1,0 +1,37 @@
+
+
+        {% verbatim %}
+        <!-- 灰色的背景 -->
+        <div v-show="modalControl.registermodal.show" class="ui view animated {{ registerfadeInOut }} active">
+        {% endverbatim %}
+            <!-- 中间的白色部分 -->
+            <form class="ui error form" method="post">
+                {% csrf_token %}
+                <div class="ui text menu">
+                    <div class="menu login">
+                        注册
+                    </div>
+                    <a v-on:click="registerModalClose" class="ui image close_right">
+                        <img src="/static/image/close_icon2.png" alt="" />
+                    </a>
+                </div>
+                <div class="ui view yellow_login"></div>
+                <div class="ui divider"></div>
+                {% for field in registerform %}
+                    <div class="field">
+                        {{ field }}
+                    </div>
+                {% endfor %}
+
+                <button type="submit" class="ui circular right button" >
+                    注册
+                    <i class="chevron inverted right icon"></i>
+                </button>
+
+            </form>
+            {% if form.errors %}
+                <div class="ui error message" style="position: absolute; top: calc(50% + 140px); left: 50%; transform: translateX(-50%); width: 484px">
+                    {{ form.errors }}
+                </div>
+            {% endif %}
+        </div>
