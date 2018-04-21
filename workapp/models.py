@@ -25,7 +25,8 @@ class HouseInfo(models.Model):
     circum = models.TextField(default="", blank=True)  # 周边信息
     translate = models.TextField(default="", blank=True)  # 交通信息
     installations = models.CharField(max_length=200, blank=True)  # 设施信息
-    area_to = models.ManyToManyField(to=Area, related_name='area_to')  # 房源对应学校名字
+    area_to = models.ManyToManyField(
+        to=Area, related_name='area_to')  # 房源对应学校名字
     label = models.CharField(max_length=200)  # 房源标签
     houseIntroduce = models.TextField()  # 房源简介
     distance = models.IntegerField(default=500)  # 房源和学校距离
@@ -38,7 +39,8 @@ class HouseInfo(models.Model):
         ('三室两厅两卫', '三室两厅两卫'),
         ('四室两厅两卫', '四室两厅两卫'),
     }
-    housetype = models.CharField(choices=ARTICLE_CHOICES, max_length=200, blank=True)  # 户型
+    housetype = models.CharField(
+        choices=ARTICLE_CHOICES, max_length=200, blank=True)  # 户型
     # 标题，如清华东路27号院2居室整租
 
     # introduce = models.TextField()#详细介绍周边和交通
@@ -65,7 +67,7 @@ class HouseInfo(models.Model):
 
 # 用户信息表
 class UserInfo(models.Model):
-    belong_to = models.OneToOneField(to=User, related_name='user_info')
+    belong_to = models.OneToOneField(to=User, related_name='user_info', on_delete=models.CASCADE)
     name = models.CharField(max_length=50, default=u'侯爵')
     # username = models.CharField(blank=True, null=False, unique=True, max_length=10)
     # password = models.CharField(blank=True, null=False, max_length=8)
@@ -75,7 +77,8 @@ class UserInfo(models.Model):
         ('男', '男'),
         ('女', '女'),
     }
-    sex = models.CharField(choices=ARTICLE_CHOICES, max_length=10, default='保密')
+    sex = models.CharField(choices=ARTICLE_CHOICES,
+                           max_length=10, default='保密')
     email = models.EmailField(unique=True)
     avatar = models.ImageField(upload_to='avatar', default='avatar/wenhao.png')
 
@@ -84,8 +87,10 @@ class UserInfo(models.Model):
 
 
 class Collect(models.Model):
-    user = models.ForeignKey(to=UserInfo, related_name='user')
-    house_title = models.ForeignKey(to=HouseInfo, related_name='house_title')
+    user = models.ForeignKey(
+        to=UserInfo, related_name='user', on_delete=models.CASCADE)
+    house_title = models.ForeignKey(
+        to=HouseInfo, related_name='house_title', on_delete=models.CASCADE)
     datetime = models.DateTimeField(null=False, default=now)
 
 
@@ -94,8 +99,10 @@ class Appointment(models.Model):
     yytime = models.DateTimeField(null=False, default=now)  # 预约时间
     yyname = models.CharField(max_length=200, blank=True)  # 预约人
     yyphone = models.CharField(max_length=200, blank=True)  # 预约号码
-    userinfo = models.ForeignKey(to=User,related_name="appoint_u",default=False)
-    houseinfo = models.ForeignKey(to=HouseInfo,related_name="appoint_h",default=False)
+    userinfo = models.ForeignKey(
+        to=User, related_name="appoint_u", default=False, on_delete=models.CASCADE)
+    houseinfo = models.ForeignKey(
+        to=HouseInfo, related_name="appoint_h", default=False, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.yyname

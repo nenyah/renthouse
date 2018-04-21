@@ -13,30 +13,31 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.urls import path
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.contrib.auth.views import logout
 from django.conf import settings
-from workapp.views import alteruser, appointment, detail, index, list, login_view, register, userinfo, forgetpass, test
-from workapp.api import area, house, onehouse
+from workapp.views import alteruser, appointment, detail, index, product_list, login_view, register, userinfo, forgetpass, test
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^alteruser/$', alteruser, name='alteruser'),
-    url(r'^appointment/$', appointment, name='appointment'),
-    url(r'^detail/(?P<id>\d+)/$', detail, name='detail'),
-    url(r'^index/$', index, name='index'),
-    url(r'^list/$', list, name='list'),
-    url(r'^login/$', login_view, name='login'),
-    url(r'^logout/$', logout, {'next_page': '/index/'}, name='logout'),
-    url(r'^register/$', register, name='register'),
-    url(r'^userinfo/$', userinfo, name='userinfo'),
-    url(r'^forgetpass/$', forgetpass, name='forgetpass'),
-    url(r'^api/areas/$', area),
-    url(r'^api/houses/$', house),
-    url(r'^api/houses/(?P<id>\d+)$', onehouse),
-    url(r'^test/$', test),
+    path('admin/', admin.site.urls),
+    path('alteruser/', alteruser, name='alteruser'),
+    path('appointment/', appointment, name='appointment'),
+    path('detail/<int:id>/', detail, name='detail'),
+    path('index/', index, name='index'),
+    path('list/', product_list, name='productlist'),
+    # path('list/<int:area>/', product_list, name='product_list'),
+    path('login/', login_view, name='login'),
+    path('logout/', logout, {'next_page': '/index/'}, name='logout'),
+    path('register/', register, name='register'),
+    path('userinfo/', userinfo, name='userinfo'),
+    path('forgetpass/', forgetpass, name='forgetpass'),
+    # path('api/areas/', area),
+    # path('api/houses/', house),
+    # path('api/houses/<int:id>', onehouse),
+    path('test/', test),
+
 ]
 
 if settings.DEBUG:
