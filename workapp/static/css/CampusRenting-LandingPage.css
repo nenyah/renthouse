@@ -159,6 +159,10 @@
     font-size: 20px;
     font-weight: bold;
     color: #ffffff;
+    z-index: 999;
+    position: absolute;
+    top: 23px;
+    left: 1121px;
 }
 
 /*-------------------------------displaywindow-------------------------------*/
