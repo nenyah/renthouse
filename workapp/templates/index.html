@@ -1,161 +1,61 @@
-<!DOCTYPE html> {% load staticfiles %}
-<html>
+{% extends 'base.html' %}
 
-<head>
-    <link rel="stylesheet" href="{% static 'css/semantic.css' %}" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="{% static 'css/CampusRenting-LandingPage.css' %}" media="screen" title="no title" charset="utf-8">
-</head>
+{% block css %}
+<link rel="stylesheet" href="/static/css/CampusRenting-LandingPage.css" media="screen" title="no title" charset="utf-8">
+{% endblock %}
 
-<body>
-    <div class="ui vertical basic segment banner">
-        <!-- - - - - - - - - - - - - masterhead - - - - - - - - - - - - -->
-        <div class="ui vertical segment masterhead">
-            <div class="ui text menu in-masterhead">
-                <!-- CampusRenting logo-image -->
-                <a class="image-logo in-menu-masterhead" href="{% url 'index' %}">
-                        <img src="/static/image/租房项目切图/1首页/logo.png" alt="" />
-                    </a>
-                <!-- CampusRenting logo-text -->
-                <a class="text-logo in-menu-masterhead" href="{% url 'index' %}">校园租</a>
-                <!-- right menu -->
-                <div class="ui right text menu in-menu-masterhead">
-                    <!-- login -->
-                    <a class="text-login in-menu-masterhead" href="{% url 'login' %}">登录</a>
-                    <!-- register button -->
-                    <a class="ui circular button in-menu-masterhead" href="{% url 'register' %}">
-                            <img class="image-key in-menu-masterhead" src="/static/image/租房项目切图/1首页/key_icon.png" alt="" />
-                            <span class="text-register in-menu-masterhead">注册</span>
-                        </a>
-                </div>
-            </div>
-        </div>
-        <div class="ui vertical basic segment seachpanel">
-            <div class="ui container searchpanel">
-                <form action="/list/" method="post">
-                    {% csrf_token %}
-                    <div class="ui borderless menu in-searchpanel">
-                        <select class="ui search selection dropdown in-searchpanel" name="area">
-                            {% for info in area_list%}
-                            <option value="{{info.id}}">{{info.name}}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
+{% block title %}校园租-首页{% endblock %}
+{% block bg-css %}style="background-image:url('/static/image/租房项目切图/1首页/cover_beautified.png');"{% endblock %}
 
-                    <input type="submit" value="Search" class="ui button in-searchpanel">
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- - - - - - - - - - - - - - - displaywindow - - - - - - - - - - - - - - -->
-    <div class="ui vertical basic segment displaywindow">
-        <div class="ui container displaywindow">
-            <!-- first row -->
-            <h1 class="ui header in-displaywindow">精选优质房源</h1>
-            <div class="ui three column grid in-displaywindow">
-                <!-- first item -->
-                {%for house in excellent_house_list %}
-                <div class="column in-displaywindow">
-                    <div class="ui card in-displaywindow">
-                        <a class="image in-card" href="{% url 'detail' house.id %}">
-                                <a class="label in-card" href="{% url 'detail' house.id %}">{{ house.label }}</a>
+
+{% block content %}
+<!-- - - - - - - - - - - - - - - displaywindow - - - - - - - - - - - - - - -->
+<div class="ui vertical basic segment displaywindow">
+    <div class="ui container displaywindow">
+        <!-- first row -->
+        <h1 class="ui header in-displaywindow">精选优质房源</h1>
+        <div class="ui three column grid in-displaywindow">
+            <!-- first item -->
+            {%for house in excellent_house_list %}
+            <div class="column in-displaywindow">
+                <div class="ui card in-displaywindow">
+                    <a class="image in-card" href="{% url 'detail' house.id %}">
+                        <a class="label in-card" href="{% url 'detail' house.id %}">{{ house.label }}</a>
                         <img src="/upload/{{ house.pic_max }}" style="with:300px;height: 120px;" alt="" />
-                        </a>
-                        <div class="content in-card">
-                            <a class="header in-card" href="{% url 'detail' house.id %}">{{ house.area }}附近房源</a>
-                            <div class="ui divider in-card"></div>
-                            <div class="description in-card">
-                                {{ house.houseIntroduce }}
-                            </div>
+                    </a>
+                    <div class="content in-card">
+                        <a class="header in-card" href="{% url 'detail' house.id %}">{{ house.area }}附近房源</a>
+                        <div class="ui divider in-card"></div>
+                        <div class="description in-card">
+                            {{ house.houseIntroduce }}
                         </div>
                     </div>
                 </div>
-                {% endfor %}
             </div>
-            <!-- second row -->
-            <h1 class="ui header in-displaywindow">毗邻学校周边</h1>
-            <div class="ui three column grid in-displaywindow">
-                <!-- first item -->
-                {% for house in nearest_house_list%}
-                <div class="column in-displaywindow">
-                    <div class="ui card in-displaywindow">
-                        <a class="image in-card" href="{% url 'detail' house.id %}">
-                                <img src="/upload/{{ house.pic_max }}" style="with:300px;height: 120px;" alt="" />
-                            </a>
-                        <div class="content in-card">
-                            <a class="header in-card" href="{% url 'detail' house.id %}">{{ house.area }}附近房源</a>
-                            <div class="ui divider in-card"></div>
-                            <div class="description in-card">
-                                {{ house.houseIntroduce }}
-                            </div>
+            {% endfor %}
+        </div>
+        <!-- second row -->
+        <h1 class="ui header in-displaywindow">毗邻学校周边</h1>
+        <div class="ui three column grid in-displaywindow">
+            <!-- first item -->
+            {% for house in nearest_house_list%}
+            <div class="column in-displaywindow">
+                <div class="ui card in-displaywindow">
+                    <a class="image in-card" href="{% url 'detail' house.id %}">
+                        <img src="/upload/{{ house.pic_max }}" style="with:300px;height: 120px;" alt="" />
+                    </a>
+                    <div class="content in-card">
+                        <a class="header in-card" href="{% url 'detail' house.id %}">{{ house.area }}附近房源</a>
+                        <div class="ui divider in-card"></div>
+                        <div class="description in-card">
+                            {{ house.houseIntroduce }}
                         </div>
                     </div>
                 </div>
-                {% endfor %}
             </div>
+            {% endfor %}
         </div>
     </div>
-    <!-- - - - - - - - - - - - - - - - - footer - - - - - - - - - - - - - - - - -->
-    <div class="ui vertical segment footer">
-        <div class="ui container footer">
-            <div class="ui grid footer">
-                <!-- firt column -->
-                <div class="four wide column in-footer">
-                    <div class="ui vertical text menu in-footer">
-                        <div class="item header-in-menu-footer">
-                            <h3 class="ui header">关于我们</h3>
-                        </div>
-                        <div class="item in-menu-footer">常见问题</div>
-                        <div class="item in-menu-footer">联系我们</div>
-                        <div class="item in-menu-footer">加入我们</div>
-                    </div>
-                </div>
-                <!-- second column -->
-                <div class="four wide column in-footer" style="padding-left: 31px;">
-                    <div class="ui vertical text menu in-footer">
-                        <div class="item header-in-menu-footer">
-                            <h3 class="ui header">热门房源</h3>
-                        </div>
-                        <div class="item in-menu-footer">北京大学</div>
-                        <div class="item in-menu-footer">清华大学</div>
-                        <div class="item in-menu-footer">人民大学</div>
-                        <div class="item in-menu-footer">北京邮电</div>
-                    </div>
-                </div>
-                <!-- third column -->
-                <div class="four wide column in-footer" style="padding-left: 62px;">
-                    <div class="ui vertical text menu in-footer">
-                        <div class="item header-in-menu-footer">
-                            <h3 class="ui header">关注我们</h3>
-                        </div>
-                        <div class="item in-menu-footer">关注微信</div>
-                        <div class="item in-menu-footer">关注微薄</div>
-                        <div class="item in-menu-footer">关注头条号</div>
-                        <div class="item in-menu-footer">关注知乎</div>
-                    </div>
-                </div>
-                <!-- fourth column -->
-                <div class="four wide column in-footer" style="padding-left: 93px;">
-                    <div class="ui vertical text menu in-footer">
-                        <div class="item header-in-menu-footer">
-                            <h3 class="ui header">反馈问题</h3>
-                        </div>
-                        <div class="item in-menu-footer" style="line-height: 150%;">
-                            欢迎写邮件向我们反馈
-                            <br /> 邮箱地址：
-                            <br /> hi@mugglecoding.com
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="ui divider in-footer"></div>
-            <div class="text-left in-footer">
-                Developed by Mugglecoding team catcuts
-            </div>
-            <div class="text-right in-footer">
-                京ICP备15047012号-2
-            </div>
-        </div>
-    </div>
-</body>
+</div>
 
-</html>
+{% endblock %}

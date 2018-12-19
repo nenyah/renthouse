@@ -1,0 +1,55 @@
+<div class="ui vertical basic segment banner">
+    <!-- - - - - - - - - - - - - masterhead - - - - - - - - - - - - -->
+    <div class="ui vertical segment masterhead">
+        <div class="ui text menu in-masterhead">
+            <!-- CampusRenting logo-image -->
+            <a class="image-logo in-menu-masterhead" href="{% url 'index' %}">
+                <img src="/static/image/租房项目切图/1首页/logo.png" alt="" />
+            </a>
+            <!-- CampusRenting logo-text -->
+            <a class="text-logo in-menu-masterhead" href="{% url 'index' %}">校园租</a>
+            <!-- right menu -->
+            <div class="ui right text menu in-menu-masterhead">
+                {% if request.user.is_authenticated %}
+                <img src="/upload/{{ request.user.user_info.avatar }}" alt="" class="ui avatar image" />
+                <span style="margin-top: 5px;position: relative; top: 15%; margin-left: 5px; color: #FFF; font-size: 1.2rem; font-weight: 700">{{
+                    request.user.user_info.name }}</span>
+                <div class="ui circular button" style="width: 100px; height: 33px; margin-left: 20px; padding-top: 0; padding-bottom: 0; background-color: #fcc416; line-height: 33px">
+                    <a href="{% url 'logout' %}" class="text-register in-menu-masterhead">退出</a>
+                </div>
+                {% else %}
+                <!-- login -->
+                <a class="text-login in-menu-masterhead" href="{% url 'login' %}">登录</a>
+                <!-- register button -->
+                <a class="ui circular button in-menu-masterhead" href="{% url 'register' %}">
+                    <img class="image-key in-menu-masterhead" src="/static/image/租房项目切图/1首页/key_icon.png" alt="" />
+                    <span class="text-register in-menu-masterhead">注册</span>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <!-- searchpanel -->
+    <!-- - - - - - - - - - - - - searchpanel - - - - - - - - - - - - -->
+    <div class="ui vertical basic segment seachpanel">
+        <div class="ui container searchpanel">
+            <form action="{% url 'productlist' %}" method="get">
+                <!-- {% csrf_token %} -->
+                <div class="ui borderless menu in-searchpanel">
+                    <select class="ui search selection dropdown in-searchpanel" name="area">
+                        {% for info in area_list%}
+                        <option value="{{info.name}}">{{info.name}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- <input type="submit" value="Search" class="ui button in-searchpanel"> -->
+                <!-- searchbutton -->
+                <button type="submit" class="ui button in-searchpanel">
+                    搜索
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>

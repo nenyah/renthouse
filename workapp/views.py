@@ -12,6 +12,8 @@ from .forms import AppointmentForm, LoginForm, RegisterForm
 from .models import Appointment, Area, HouseInfo, UserInfo
 
 # 测试
+
+
 def test(request):
     # 获取所有学校
     context = {}
@@ -20,14 +22,13 @@ def test(request):
 
     context['excellent_house_list'] = get_excellent_house(area_list)
 
-
     context['nearest_house_list'] = get_nearest_house(area_list)
 
-
     if '清华大学' not in request.POST:
-            return render(request,'test.html', context)
-    c=request.POST[1]
-    return HttpResponse("OK %s" %c)
+        return render(request, 'test.html', context)
+    c = request.POST[1]
+    return HttpResponse("OK %s" % c)
+
 
 def get_excellent_house(area_list):
     # 获取优质房源
@@ -36,7 +37,8 @@ def get_excellent_house(area_list):
     excellent_house_list = []
     for area in area_list[:3]:
         house_info = {}
-        house = HouseInfo.objects.filter(area_to=area.id).prefetch_related("area_to").order_by('rent')[0]
+        house = HouseInfo.objects.filter(area_to=area.id).prefetch_related(
+            "area_to").order_by('rent')[0]
         house_info['id'] = house.id
         house_info['pic_max'] = house.pic_max
         house_info['label'] = house.label
@@ -45,6 +47,7 @@ def get_excellent_house(area_list):
         excellent_house_list.append(house_info)
     return excellent_house_list
 
+
 def get_nearest_house(area_list):
     # 获取最近房源
     # 随机三个学校区域，选出该区域最近的房子
@@ -52,7 +55,8 @@ def get_nearest_house(area_list):
     nearest_house_list = []
     for area in area_list[:3]:
         house_info = {}
-        house = HouseInfo.objects.filter(area_to=area.id).prefetch_related("area_to").order_by('distance')[0]
+        house = HouseInfo.objects.filter(area_to=area.id).prefetch_related(
+            "area_to").order_by('distance')[0]
         house_info['id'] = house.id
         house_info['pic_max'] = house.pic_max
         house_info['label'] = house.label
@@ -70,7 +74,6 @@ def index(request):
     context['area_list'] = area_list
 
     context['excellent_house_list'] = get_excellent_house(area_list)
-
 
     context['nearest_house_list'] = get_nearest_house(area_list)
 
@@ -96,31 +99,49 @@ def div_list(ls):
         return ls_return
 
 # 列表页
+
+
 def product_list(request):
     context = {}
     # 搜索框传数值
     area = request.GET.get('area')
+    page_index = request.GET.get('page')
     if request.method == 'GET':
         if area is not None:
-            Area_ob = Area.objects.filter(id=area)[0].name
-            house_info = HouseInfo.objects.filter(area_to=area).order_by('-rent')
+            Area_ob = Area.objects.filter(name=area)[0]
+            house_info = HouseInfo.objects.filter(
+                area_to=Area_ob).order_by('-rent')
             area_num = len(house_info)
+
         else:
-            Area_ob = '全部地区'
             house_info = HouseInfo.objects.all().order_by('-rent')
             area_num = len(house_info)
+
     elif request.method == 'POST':
         area = request.POST.get('area')
-        Area_ob = Area.objects.filter(id=area)[0].name
-        house_info = HouseInfo.objects.filter(area_to=area).order_by('-rent')
+        Area_ob = Area.objects.filter(id=area)
+        house_info = HouseInfo.objects.filter(
+            area_to=Area_ob).order_by('-rent')
         area_num = len(house_info)
-        print(area)
-    context['area'] = Area_ob
+
+    page_robot = Paginator(house_info, 9)
+    if not page_index:
+        page_index = 1
+    try:
+        house_list = page_robot.page(page_index)
+    except EmptyPage:
+        house_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        house_list = page_robot.page(1)
+
+    print(area)
+    print(page_index)
+    context['area'] = area
     context['area_num'] = area_num
-    context['house_info'] = house_info
+    context['house_list'] = house_list
     return render(request, 'list.html', context)
-    # 
-    
+    #
+
     # context['house_list'] = house_list
     # context['page_num'] = page_num
     # context['page_range'] = page_range
@@ -221,7 +242,6 @@ def product_list(request):
     # return render(request, 'list.html', context)
 
 
-
 # @login_required(login_url='/index/')
 def detail(request, id):
     try:
@@ -242,7 +262,7 @@ def detail(request, id):
 def userinfo(request):
     user = request.user
     appoint_list = user.appoint_u.all()
-    context = {"appoint_list":appoint_list}
+    context = {"appoint_list": appoint_list}
     return render(request, 'personcenter.html', context)
 
 
@@ -287,6 +307,7 @@ def register(request):
     context['form'] = form
     return render(request, 'register.html', context)
 
+
 def forgetpass(request):
     context = {}
     if request.method != "POST":
@@ -311,11 +332,11 @@ def alteruser(request):
     context = {}
     if request.method != "POST":
         userinfo = request.user.user_info
-        context["userinfo"]=userinfo
+        context["userinfo"] = userinfo
     else:
-        username = request.POST.get('username',"")
-        password = request.POST.get('password',"")
-        print(username,password)
+        username = request.POST.get('username', "")
+        password = request.POST.get('password', "")
+        print(username, password)
         user = request.user
         userinfo = request.user.user_info
         userinfo.name = username
@@ -338,8 +359,9 @@ def appointment(request):
             yyname = form.cleaned_data["yyname"]
             yyphone = form.cleaned_data["yyphone"]
             houseinfo_id = request.GET.get('houseinfo_id')
-            houseinfo_object = HouseInfo.objects.get(id = houseinfo_id)
-            c = Appointment(yyname=yyname, yyphone=yyphone,userinfo=request.user,houseinfo=houseinfo_object)
+            houseinfo_object = HouseInfo.objects.get(id=houseinfo_id)
+            c = Appointment(yyname=yyname, yyphone=yyphone,
+                            userinfo=request.user, houseinfo=houseinfo_object)
             c.save()
             return redirect(to="userinfo")
     context['form'] = form

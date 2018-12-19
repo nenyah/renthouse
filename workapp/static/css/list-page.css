@@ -28,7 +28,7 @@ img {
 }
 
 .ui.vertical.basic.segment.bg {
-    width: 1440px;
+    /* width: 1440px; */
     height: 228px;
     background: url('../image/banner_bg.png');
     background-size: cover;
@@ -132,6 +132,8 @@ img {
     left: 50%;
     top: 65.7%;
     transform: translate(-50%, -50%);
+    margin-top: -220px;
+    margin-bottom: 200px;
 }
 
 .Rectangle-87 {

@@ -129,6 +129,8 @@
     border-radius: 0;
     padding: 0;
     margin: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
 }
 
 .dropdown.icon.in-dropdown-searchpanel {
@@ -267,6 +269,11 @@
 /*do not repeat yourself*/
 .ui.vertical.segment.footer {
     height: 281px;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    /* margin-top: 200px; */
+
 }
 
 .ui.container.footer {
