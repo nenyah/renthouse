@@ -1,0 +1,686 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb 20 22:08:19 2019] ***
+compiled with version: 5.4.0 20160609 on 21 February 2019 01:24:04
+os: Linux-4.10.2-041002-generic #201703120131 SMP Sun Mar 12 06:33:34 UTC 2017
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/steven/renthouse
+writing pidfile to uwsgi.pid
+detected binary path: /home/steven/.virtualenvs/renthouse/bin/uwsgi
+chdir() to /home/steven/renthouse
+your processes number limit is 3858
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8001 fd 3
+Python version: 3.6.7 (default, Oct 25 2018, 09:16:13)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x11e0660
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 166752 bytes (162 KB) for 2 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x11e0660 pid: 6839 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6839)
+spawned uWSGI worker 1 (pid: 6852, cores: 2)
+Python auto-reloader enabled
+[pid: 6852|app: 0|req: 1/1] 221.136.82.209 () {48 vars in 863 bytes} [Thu Feb 21 11:08:30 2019] GET /index => generated 0 bytes in 30 msecs (HTTP/1.1 301) 3 headers in 112 bytes (1 switches on core 0)
+[pid: 6852|app: 0|req: 2/2] 221.136.82.209 () {48 vars in 865 bytes} [Thu Feb 21 11:08:30 2019] GET /index/ => generated 11649 bytes in 258 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 1)
+[pid: 6852|app: 0|req: 3/3] 221.136.82.209 () {48 vars in 886 bytes} [Thu Feb 21 11:08:31 2019] GET /upload/house_pic/bigimg_AABowKm.png => generated 428210 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 0)
+[pid: 6852|app: 0|req: 4/4] 221.136.82.209 () {48 vars in 864 bytes} [Thu Feb 21 11:08:31 2019] GET /upload/house_pic/1-0.jpg => generated 36118 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 1)
+[pid: 6852|app: 0|req: 5/5] 221.136.82.209 () {48 vars in 866 bytes} [Thu Feb 21 11:08:31 2019] GET /upload/house_pic/11-0.jpg => generated 42579 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 0)
+[pid: 6852|app: 0|req: 6/6] 221.136.82.209 () {48 vars in 866 bytes} [Thu Feb 21 11:08:31 2019] GET /upload/house_pic/10-0.jpg => generated 37138 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 1)
+清华大学
+1
+[pid: 6852|app: 0|req: 7/7] 221.136.82.209 () {50 vars in 990 bytes} [Thu Feb 21 11:09:05 2019] GET /list/?area=%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6 => generated 16677 bytes in 20 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 0)
+[pid: 6852|app: 0|req: 8/8] 221.136.82.209 () {48 vars in 907 bytes} [Thu Feb 21 11:09:06 2019] GET /upload/house_pic/20-0.jpg => generated 76932 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 1)
+[pid: 6852|app: 0|req: 9/9] 221.136.82.209 () {48 vars in 927 bytes} [Thu Feb 21 11:09:06 2019] GET /upload/house_pic/bigimg_AABowKm.png => generated 428210 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 0)
+[pid: 6852|app: 0|req: 10/10] 221.136.82.209 () {50 vars in 958 bytes} [Thu Feb 21 11:09:09 2019] GET /detail/15/ => generated 9100 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 1)
+[pid: 6852|app: 0|req: 11/11] 221.136.82.209 () {48 vars in 870 bytes} [Thu Feb 21 11:09:09 2019] GET /upload/house_pic/20-0.jpg => generated 76932 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 0)
+[pid: 6852|app: 0|req: 12/12] 221.136.82.209 () {48 vars in 870 bytes} [Thu Feb 21 11:09:09 2019] GET /upload/house_pic/20-1.jpg => generated 75516 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 1)
+[pid: 6852|app: 0|req: 13/13] 221.136.82.209 () {48 vars in 870 bytes} [Thu Feb 21 11:09:09 2019] GET /upload/house_pic/20-2.jpg => generated 78542 bytes in 4 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 0)
+[pid: 6852|app: 0|req: 15/14] 221.136.82.209 () {48 vars in 870 bytes} [Thu Feb 21 11:09:09 2019] GET /upload/house_pic/20-3.jpg => generated 84446 bytes in 4 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 0)
+[pid: 6852|app: 0|req: 15/15] 221.136.82.209 () {48 vars in 870 bytes} [Thu Feb 21 11:09:09 2019] GET /upload/house_pic/20-4.jpg => generated 83121 bytes in 4 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 1)
+[pid: 6852|app: 0|req: 16/16] 221.136.82.209 () {48 vars in 870 bytes} [Thu Feb 21 11:09:10 2019] GET /upload/house_pic/20-5.jpg => generated 44105 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 0)
+[pid: 6852|app: 0|req: 17/17] 221.136.82.209 () {48 vars in 870 bytes} [Thu Feb 21 11:09:10 2019] GET /upload/house_pic/20-6.jpg => generated 57971 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 1)
+[pid: 6852|app: 0|req: 18/18] 221.136.82.209 () {48 vars in 886 bytes} [Thu Feb 21 11:09:10 2019] GET /upload/house_pic/20-1_dA3ckgv.jpg => generated 75516 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 0)
+[pid: 6852|app: 0|req: 19/19] 221.136.82.209 () {48 vars in 886 bytes} [Thu Feb 21 11:09:10 2019] GET /upload/house_pic/20-2_7ZD5flM.jpg => generated 78542 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 1)
+[pid: 6852|app: 0|req: 20/20] 221.136.82.209 () {48 vars in 886 bytes} [Thu Feb 21 11:09:10 2019] GET /upload/house_pic/20-3_jpNkML6.jpg => generated 84446 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 0)
+Not Found: /
+[pid: 6852|app: 0|req: 21/21] 221.136.82.209 () {46 vars in 831 bytes} [Thu Feb 21 11:09:22 2019] GET / => generated 3553 bytes in 9 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 6852|app: 0|req: 22/22] 221.136.82.209 () {46 vars in 860 bytes} [Thu Feb 21 11:10:23 2019] GET /index/ => generated 11649 bytes in 37 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 0)
+清华大学
+1
+[pid: 6852|app: 0|req: 23/23] 221.136.82.209 () {46 vars in 937 bytes} [Thu Feb 21 11:10:25 2019] GET /list/?area=%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6 => generated 16677 bytes in 15 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 1)
+[pid: 6852|app: 0|req: 24/24] 221.136.82.209 () {46 vars in 897 bytes} [Thu Feb 21 11:10:32 2019] GET /index/ => generated 11649 bytes in 36 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 0)
+北京邮电大学
+1
+[pid: 6852|app: 0|req: 25/25] 221.136.82.209 () {46 vars in 973 bytes} [Thu Feb 21 11:10:35 2019] GET /list/?area=%E5%8C%97%E4%BA%AC%E9%82%AE%E7%94%B5%E5%A4%A7%E5%AD%A6 => generated 15899 bytes in 21 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 1)
+[pid: 6852|app: 0|req: 26/26] 221.136.82.209 () {46 vars in 915 bytes} [Thu Feb 21 11:10:38 2019] GET /index/ => generated 11649 bytes in 36 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 0)
+北京大学
+1
+[pid: 6852|app: 0|req: 27/27] 221.136.82.209 () {46 vars in 937 bytes} [Thu Feb 21 11:10:41 2019] GET /list/?area=%E5%8C%97%E4%BA%AC%E5%A4%A7%E5%AD%A6 => generated 22229 bytes in 20 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 1)
+[pid: 6852|app: 0|req: 28/28] 221.136.82.209 () {44 vars in 854 bytes} [Thu Feb 21 11:10:41 2019] GET /upload/house_pic/16-0.jpg => generated 49908 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 0)
+[pid: 6852|app: 0|req: 29/29] 221.136.82.209 () {44 vars in 852 bytes} [Thu Feb 21 11:10:41 2019] GET /upload/house_pic/7-0.jpg => generated 46171 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 1)
+[pid: 6852|app: 0|req: 31/30] 221.136.82.209 () {44 vars in 854 bytes} [Thu Feb 21 11:10:41 2019] GET /upload/house_pic/14-0.jpg => generated 39956 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 1)
+[pid: 6852|app: 0|req: 31/31] 221.136.82.209 () {44 vars in 852 bytes} [Thu Feb 21 11:10:41 2019] GET /upload/house_pic/9-0.jpg => generated 55976 bytes in 4 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 0)
+[pid: 6852|app: 0|req: 32/32] 221.136.82.209 () {44 vars in 854 bytes} [Thu Feb 21 11:10:41 2019] GET /upload/house_pic/17-0.jpg => generated 28589 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 1)
+[pid: 6852|app: 0|req: 33/33] 221.136.82.209 () {44 vars in 852 bytes} [Thu Feb 21 11:10:41 2019] GET /upload/house_pic/8-0.jpg => generated 46514 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 0)
+[pid: 6852|app: 0|req: 34/34] 221.136.82.209 () {44 vars in 854 bytes} [Thu Feb 21 11:10:42 2019] GET /upload/house_pic/13-0.jpg => generated 28792 bytes in 4 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 1)
+[pid: 6852|app: 0|req: 35/35] 221.136.82.209 () {44 vars in 870 bytes} [Thu Feb 21 11:10:42 2019] GET /upload/house_pic/12-0_SCzBNzn.jpg => generated 46390 bytes in 4 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 0)
+北京大学
+1
+[pid: 6852|app: 0|req: 36/36] 221.136.82.209 () {46 vars in 990 bytes} [Thu Feb 21 11:10:45 2019] GET /list/?area=%E5%8C%97%E4%BA%AC%E5%A4%A7%E5%AD%A6&page= => generated 22229 bytes in 21 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 1)
+北京大学
+1
+[pid: 6852|app: 0|req: 37/37] 221.136.82.209 () {46 vars in 996 bytes} [Thu Feb 21 11:10:49 2019] GET /list/?area=%E5%8C%97%E4%BA%AC%E5%A4%A7%E5%AD%A6&page= => generated 22229 bytes in 21 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 0)
+北京大学
+1
+[pid: 6852|app: 0|req: 38/38] 221.136.82.209 () {46 vars in 996 bytes} [Thu Feb 21 11:10:52 2019] GET /list/?area=%E5%8C%97%E4%BA%AC%E5%A4%A7%E5%AD%A6&page= => generated 22229 bytes in 20 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 1)
+北京大学
+1
+[pid: 6852|app: 0|req: 39/39] 221.136.82.209 () {46 vars in 996 bytes} [Thu Feb 21 11:10:55 2019] GET /list/?area=%E5%8C%97%E4%BA%AC%E5%A4%A7%E5%AD%A6&page= => generated 22229 bytes in 17 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 0)
+北京大学
+1
+[pid: 6852|app: 0|req: 40/40] 221.136.82.209 () {46 vars in 996 bytes} [Thu Feb 21 11:10:57 2019] GET /list/?area=%E5%8C%97%E4%BA%AC%E5%A4%A7%E5%AD%A6&page= => generated 22229 bytes in 18 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 1)
+Internal Server Error: /list/
+Traceback (most recent call last):
+  File "/home/steven/.virtualenvs/renthouse/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/steven/.virtualenvs/renthouse/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/steven/.virtualenvs/renthouse/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./workapp/views.py", line 125, in product_list
+    area_num = len(house_info)
+  File "/home/steven/.virtualenvs/renthouse/lib/python3.6/site-packages/django/db/models/query.py", line 250, in __len__
+    self._fetch_all()
+  File "/home/steven/.virtualenvs/renthouse/lib/python3.6/site-packages/django/db/models/query.py", line 1183, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/steven/.virtualenvs/renthouse/lib/python3.6/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/steven/.virtualenvs/renthouse/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1048, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/steven/.virtualenvs/renthouse/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 460, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "/home/steven/.virtualenvs/renthouse/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 390, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/home/steven/.virtualenvs/renthouse/lib/python3.6/site-packages/django/db/models/sql/where.py", line 81, in as_sql
+    sql, params = compiler.compile(child)
+  File "/home/steven/.virtualenvs/renthouse/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 390, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/home/steven/.virtualenvs/renthouse/lib/python3.6/site-packages/django/db/models/fields/related_lookups.py", line 130, in as_sql
+    return super().as_sql(compiler, connection)
+  File "/home/steven/.virtualenvs/renthouse/lib/python3.6/site-packages/django/db/models/lookups.py", line 163, in as_sql
+    rhs_sql, rhs_params = self.process_rhs(compiler, connection)
+  File "/home/steven/.virtualenvs/renthouse/lib/python3.6/site-packages/django/db/models/lookups.py", line 257, in process_rhs
+    'The QuerySet value for an exact lookup must be limited to '
+ValueError: The QuerySet value for an exact lookup must be limited to one result using slicing.
+[pid: 6852|app: 0|req: 41/41] 221.136.82.209 () {54 vars in 1252 bytes} [Thu Feb 21 11:11:32 2019] POST /list/?area=%E5%8C%97%E4%BA%AC%E5%A4%A7%E5%AD%A6&page= => generated 113712 bytes in 174 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+[pid: 6852|app: 0|req: 42/42] 221.136.82.209 () {46 vars in 903 bytes} [Thu Feb 21 11:11:49 2019] GET /index/ => generated 11649 bytes in 38 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 1)
+Not Found: /
+[pid: 6852|app: 0|req: 43/43] 185.47.49.166 () {28 vars in 304 bytes} [Thu Feb 21 11:32:19 2019] GET / => generated 3553 bytes in 6 msecs (HTTP/1.0 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 6852|app: 0|req: 44/44] 186.176.155.61 () {32 vars in 462 bytes} [Thu Feb 21 12:03:10 2019] GET / => generated 3556 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Invalid HTTP_HOST header: 'geekdata.shop'. You may need to add 'geekdata.shop' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 6852|app: 0|req: 45/45] 221.136.82.209 () {42 vars in 710 bytes} [Thu Feb 21 12:14:21 2019] GET / => generated 55731 bytes in 60 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'geekdata.shop'. You may need to add 'geekdata.shop' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[pid: 6852|app: 0|req: 46/46] 221.136.82.209 () {42 vars in 688 bytes} [Thu Feb 21 12:14:21 2019] GET /favicon.ico => generated 55819 bytes in 56 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 1)
+[uwsgi-python-reloader] module/file ./projectwork/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 6852)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/steven/renthouse
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (:8001)
+running /home/steven/.virtualenvs/renthouse/bin/uwsgi
+[uWSGI] getting INI configuration from renthouse_uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Thu Feb 21 12:15:50 2019] ***
+compiled with version: 5.4.0 20160609 on 21 February 2019 01:24:04
+os: Linux-4.10.2-041002-generic #201703120131 SMP Sun Mar 12 06:33:34 UTC 2017
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/steven/renthouse
+detected binary path: /home/steven/.virtualenvs/renthouse/bin/uwsgi
+chdir() to /home/steven/renthouse
+your processes number limit is 3858
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.7 (default, Oct 25 2018, 09:16:13)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x1e6da90
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 166752 bytes (162 KB) for 2 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1e6da90 pid: 6839 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 6839)
+spawned uWSGI worker 1 (pid: 8699, cores: 2)
+Python auto-reloader enabled
+Invalid HTTP_HOST header: 'geekdata.shop'. You may need to add 'geekdata.shop' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 8699|app: 0|req: 1/1] 221.136.82.209 () {44 vars in 741 bytes} [Thu Feb 21 12:15:53 2019] GET / => generated 55924 bytes in 105 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'geekdata.shop'. You may need to add 'geekdata.shop' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[pid: 8699|app: 0|req: 2/2] 221.136.82.209 () {46 vars in 741 bytes} [Thu Feb 21 12:15:55 2019] GET /favicon.ico => generated 56138 bytes in 58 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 1)
+Invalid HTTP_HOST header: 'geekdata.shop'. You may need to add 'geekdata.shop' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 8699|app: 0|req: 3/3] 221.136.82.209 () {44 vars in 741 bytes} [Thu Feb 21 12:15:58 2019] GET / => generated 55924 bytes in 73 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'geekdata.shop'. You may need to add 'geekdata.shop' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[pid: 8699|app: 0|req: 4/4] 221.136.82.209 () {46 vars in 741 bytes} [Thu Feb 21 12:15:59 2019] GET /favicon.ico => generated 56138 bytes in 58 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 1)
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb 20 23:16:07 2019] ***
+compiled with version: 5.4.0 20160609 on 21 February 2019 01:24:04
+os: Linux-4.10.2-041002-generic #201703120131 SMP Sun Mar 12 06:33:34 UTC 2017
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/steven/renthouse
+writing pidfile to uwsgi.pid
+detected binary path: /home/steven/.virtualenvs/renthouse/bin/uwsgi
+chdir() to /home/steven/renthouse
+your processes number limit is 3858
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (:8001).
+bind(): Address already in use [core/socket.c line 769]
+Invalid HTTP_HOST header: 'geekdata.shop'. You may need to add 'geekdata.shop' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 8699|app: 0|req: 5/5] 221.136.82.209 () {44 vars in 741 bytes} [Thu Feb 21 12:16:10 2019] GET / => generated 55924 bytes in 57 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'geekdata.shop'. You may need to add 'geekdata.shop' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[pid: 8699|app: 0|req: 6/6] 221.136.82.209 () {46 vars in 741 bytes} [Thu Feb 21 12:16:10 2019] GET /favicon.ico => generated 56138 bytes in 58 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 1)
+Not Found: /
+[pid: 8699|app: 0|req: 7/7] 221.136.82.209 () {42 vars in 714 bytes} [Thu Feb 21 12:16:24 2019] GET / => generated 3556 bytes in 20 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 8699|app: 0|req: 8/8] 221.136.82.209 () {42 vars in 696 bytes} [Thu Feb 21 12:16:24 2019] GET /favicon.ico => generated 3607 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 8699|app: 0|req: 9/9] 221.136.82.209 () {42 vars in 724 bytes} [Thu Feb 21 12:16:29 2019] GET /index => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 112 bytes (1 switches on core 0)
+[pid: 8699|app: 0|req: 10/10] 221.136.82.209 () {42 vars in 726 bytes} [Thu Feb 21 12:16:30 2019] GET /index/ => generated 11649 bytes in 142 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 1)
+[pid: 8699|app: 0|req: 11/11] 221.136.82.209 () {44 vars in 817 bytes} [Thu Feb 21 12:16:30 2019] GET /upload/house_pic/1-0.jpg => generated 36118 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 0)
+[pid: 8699|app: 0|req: 13/12] 221.136.82.209 () {44 vars in 819 bytes} [Thu Feb 21 12:16:30 2019] GET /upload/house_pic/11-0.jpg => generated 42579 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 0)
+[pid: 8699|app: 0|req: 13/13] 221.136.82.209 () {44 vars in 839 bytes} [Thu Feb 21 12:16:30 2019] GET /upload/house_pic/bigimg_AABowKm.png => generated 428210 bytes in 4 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 1)
+[pid: 8699|app: 0|req: 14/14] 221.136.82.209 () {44 vars in 819 bytes} [Thu Feb 21 12:16:30 2019] GET /upload/house_pic/10-0.jpg => generated 37138 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 0)
+[uwsgi-python-reloader] module/file ./projectwork/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 8699)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/steven/renthouse
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (:8001)
+running /home/steven/.virtualenvs/renthouse/bin/uwsgi
+[uWSGI] getting INI configuration from renthouse_uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Thu Feb 21 12:17:25 2019] ***
+compiled with version: 5.4.0 20160609 on 21 February 2019 01:24:04
+os: Linux-4.10.2-041002-generic #201703120131 SMP Sun Mar 12 06:33:34 UTC 2017
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/steven/renthouse
+detected binary path: /home/steven/.virtualenvs/renthouse/bin/uwsgi
+chdir() to /home/steven/renthouse
+your processes number limit is 3858
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.7 (default, Oct 25 2018, 09:16:13)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x25c8a90
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 166752 bytes (162 KB) for 2 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x25c8a90 pid: 6839 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 6839)
+spawned uWSGI worker 1 (pid: 8749, cores: 2)
+Python auto-reloader enabled
+Not Found: /
+[pid: 8749|app: 0|req: 1/1] 106.12.112.59 () {34 vars in 2468 bytes} [Thu Feb 21 12:17:29 2019] PROPFIND / => generated 3553 bytes in 29 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /webdav/
+[pid: 8749|app: 0|req: 2/2] 106.12.112.59 () {32 vars in 375 bytes} [Thu Feb 21 12:17:29 2019] GET /webdav/ => generated 3595 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /14B78168.php
+[pid: 8749|app: 0|req: 3/3] 106.12.112.59 () {34 vars in 510 bytes} [Thu Feb 21 12:17:29 2019] GET /14B78168.php => generated 3607 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /help.php
+[pid: 8749|app: 0|req: 4/4] 106.12.112.59 () {34 vars in 502 bytes} [Thu Feb 21 12:17:30 2019] GET /help.php => generated 3595 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /java.php
+[pid: 8749|app: 0|req: 5/5] 106.12.112.59 () {34 vars in 502 bytes} [Thu Feb 21 12:17:30 2019] GET /java.php => generated 3595 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /_query.php
+[pid: 8749|app: 0|req: 6/6] 106.12.112.59 () {34 vars in 506 bytes} [Thu Feb 21 12:17:31 2019] GET /_query.php => generated 3601 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /test.php
+[pid: 8749|app: 0|req: 8/7] 106.12.112.59 () {34 vars in 502 bytes} [Thu Feb 21 12:17:31 2019] GET /test.php => generated 3595 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 8749|app: 0|req: 8/8] 221.136.82.209 () {46 vars in 846 bytes} [Thu Feb 21 12:17:31 2019] GET /index/ => generated 11649 bytes in 168 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 0)
+Not Found: /db_pma.php
+[pid: 8749|app: 0|req: 9/9] 106.12.112.59 () {34 vars in 506 bytes} [Thu Feb 21 12:17:33 2019] GET /db_pma.php => generated 3601 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /logon.php
+[pid: 8749|app: 0|req: 10/10] 106.12.112.59 () {34 vars in 504 bytes} [Thu Feb 21 12:17:34 2019] GET /logon.php => generated 3598 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /help-e.php
+[pid: 8749|app: 0|req: 11/11] 106.12.112.59 () {34 vars in 506 bytes} [Thu Feb 21 12:17:34 2019] GET /help-e.php => generated 3601 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /license.php
+[pid: 8749|app: 0|req: 12/12] 106.12.112.59 () {34 vars in 508 bytes} [Thu Feb 21 12:17:34 2019] GET /license.php => generated 3604 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /log.php
+[pid: 8749|app: 0|req: 13/13] 106.12.112.59 () {34 vars in 500 bytes} [Thu Feb 21 12:17:35 2019] GET /log.php => generated 3592 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /hell.php
+[pid: 8749|app: 0|req: 14/14] 106.12.112.59 () {34 vars in 502 bytes} [Thu Feb 21 12:17:35 2019] GET /hell.php => generated 3595 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /pmd_online.php
+[pid: 8749|app: 0|req: 15/15] 106.12.112.59 () {34 vars in 514 bytes} [Thu Feb 21 12:17:36 2019] GET /pmd_online.php => generated 3613 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /x.php
+[pid: 8749|app: 0|req: 16/16] 106.12.112.59 () {34 vars in 496 bytes} [Thu Feb 21 12:17:36 2019] GET /x.php => generated 3586 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shell.php
+[pid: 8749|app: 0|req: 17/17] 106.12.112.59 () {34 vars in 504 bytes} [Thu Feb 21 12:17:36 2019] GET /shell.php => generated 3598 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /htdocs.php
+[pid: 8749|app: 0|req: 18/18] 106.12.112.59 () {34 vars in 506 bytes} [Thu Feb 21 12:17:37 2019] GET /htdocs.php => generated 3601 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+清华大学
+1
+[pid: 8749|app: 0|req: 19/19] 221.136.82.209 () {46 vars in 943 bytes} [Thu Feb 21 12:17:38 2019] GET /list/?area=%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6 => generated 16677 bytes in 17 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 1)
+[pid: 8749|app: 0|req: 20/20] 221.136.82.209 () {44 vars in 860 bytes} [Thu Feb 21 12:17:39 2019] GET /upload/house_pic/20-0.jpg => generated 76932 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 4 headers in 143 bytes (0 switches on core 0)
+Not Found: /lala.php
+[pid: 8749|app: 0|req: 21/21] 106.12.112.59 () {34 vars in 502 bytes} [Thu Feb 21 12:17:45 2019] GET /lala.php => generated 3595 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /lala-dpr.php
+[pid: 8749|app: 0|req: 22/22] 106.12.112.59 () {34 vars in 510 bytes} [Thu Feb 21 12:17:46 2019] GET /lala-dpr.php => generated 3607 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /wpc.php
+[pid: 8749|app: 0|req: 23/23] 106.12.112.59 () {34 vars in 500 bytes} [Thu Feb 21 12:17:49 2019] GET /wpc.php => generated 3592 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /wpo.php
+[pid: 8749|app: 0|req: 24/24] 106.12.112.59 () {34 vars in 500 bytes} [Thu Feb 21 12:17:50 2019] GET /wpo.php => generated 3592 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /text.php
+[pid: 8749|app: 0|req: 25/25] 106.12.112.59 () {34 vars in 502 bytes} [Thu Feb 21 12:17:50 2019] GET /text.php => generated 3595 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /wp-config.php
+[pid: 8749|app: 0|req: 26/26] 106.12.112.59 () {34 vars in 512 bytes} [Thu Feb 21 12:17:54 2019] GET /wp-config.php => generated 3610 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /muhstik.php
+[pid: 8749|app: 0|req: 27/27] 106.12.112.59 () {34 vars in 508 bytes} [Thu Feb 21 12:17:55 2019] GET /muhstik.php => generated 3604 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /muhstik2.php
+[pid: 8749|app: 0|req: 28/28] 106.12.112.59 () {34 vars in 510 bytes} [Thu Feb 21 12:17:55 2019] GET /muhstik2.php => generated 3607 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /muhstiks.php
+[pid: 8749|app: 0|req: 29/29] 106.12.112.59 () {34 vars in 510 bytes} [Thu Feb 21 12:17:57 2019] GET /muhstiks.php => generated 3607 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /muhstik-dpr.php
+[pid: 8749|app: 0|req: 30/30] 106.12.112.59 () {34 vars in 516 bytes} [Thu Feb 21 12:17:58 2019] GET /muhstik-dpr.php => generated 3616 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /lol.php
+[pid: 8749|app: 0|req: 31/31] 106.12.112.59 () {34 vars in 500 bytes} [Thu Feb 21 12:17:58 2019] GET /lol.php => generated 3592 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /uploader.php
+[pid: 8749|app: 0|req: 32/32] 106.12.112.59 () {34 vars in 510 bytes} [Thu Feb 21 12:17:59 2019] GET /uploader.php => generated 3607 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /cmd.php
+[pid: 8749|app: 0|req: 33/33] 106.12.112.59 () {34 vars in 500 bytes} [Thu Feb 21 12:17:59 2019] GET /cmd.php => generated 3592 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /cmv.php
+[pid: 8749|app: 0|req: 34/34] 106.12.112.59 () {34 vars in 500 bytes} [Thu Feb 21 12:18:01 2019] GET /cmv.php => generated 3592 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /cmdd.php
+[pid: 8749|app: 0|req: 35/35] 106.12.112.59 () {34 vars in 502 bytes} [Thu Feb 21 12:18:02 2019] GET /cmdd.php => generated 3595 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /knal.php
+[pid: 8749|app: 0|req: 36/36] 106.12.112.59 () {34 vars in 502 bytes} [Thu Feb 21 12:18:02 2019] GET /knal.php => generated 3595 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /cmd.php
+[pid: 8749|app: 0|req: 37/37] 106.12.112.59 () {34 vars in 500 bytes} [Thu Feb 21 12:18:03 2019] GET /cmd.php => generated 3592 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /shell.php
+[pid: 8749|app: 0|req: 38/38] 106.12.112.59 () {34 vars in 504 bytes} [Thu Feb 21 12:18:04 2019] GET /shell.php => generated 3598 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /appserv.php
+[pid: 8749|app: 0|req: 39/39] 106.12.112.59 () {34 vars in 508 bytes} [Thu Feb 21 12:18:05 2019] GET /appserv.php => generated 3604 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /scripts/setup.php
+[pid: 8749|app: 0|req: 40/40] 106.12.112.59 () {34 vars in 520 bytes} [Thu Feb 21 12:18:06 2019] GET /scripts/setup.php => generated 3622 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpmyadmin/scripts/setup.php
+[pid: 8749|app: 0|req: 41/41] 106.12.112.59 () {34 vars in 542 bytes} [Thu Feb 21 12:18:06 2019] GET /phpmyadmin/scripts/setup.php => generated 3655 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /phpMyAdmin/scripts/setup.php
+[pid: 8749|app: 0|req: 42/42] 106.12.112.59 () {34 vars in 542 bytes} [Thu Feb 21 12:18:06 2019] GET /phpMyAdmin/scripts/setup.php => generated 3655 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpmyadmin/scripts/db___.init.php
+[pid: 8749|app: 0|req: 43/43] 106.12.112.59 () {34 vars in 552 bytes} [Thu Feb 21 12:18:07 2019] GET /phpmyadmin/scripts/db___.init.php => generated 3670 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /phpMyAdmin/scripts/db___.init.php
+[pid: 8749|app: 0|req: 44/44] 106.12.112.59 () {34 vars in 552 bytes} [Thu Feb 21 12:18:07 2019] GET /phpMyAdmin/scripts/db___.init.php => generated 3670 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /plugins/weathermap/editor.php
+[pid: 8749|app: 0|req: 45/45] 106.12.112.59 () {34 vars in 544 bytes} [Thu Feb 21 12:18:09 2019] GET /plugins/weathermap/editor.php => generated 3658 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /xw.php
+[pid: 8749|app: 0|req: 46/46] 106.12.112.59 () {38 vars in 587 bytes} [Thu Feb 21 12:18:17 2019] POST /xw.php => generated 3590 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /xw1.php
+[pid: 8749|app: 0|req: 47/47] 106.12.112.59 () {38 vars in 589 bytes} [Thu Feb 21 12:18:18 2019] POST /xw1.php => generated 3593 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /9678.php
+[pid: 8749|app: 0|req: 48/48] 106.12.112.59 () {38 vars in 591 bytes} [Thu Feb 21 12:18:18 2019] POST /9678.php => generated 3596 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /wc.php
+[pid: 8749|app: 0|req: 49/49] 106.12.112.59 () {38 vars in 587 bytes} [Thu Feb 21 12:18:22 2019] POST /wc.php => generated 3590 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /xx.php
+[pid: 8749|app: 0|req: 50/50] 106.12.112.59 () {38 vars in 587 bytes} [Thu Feb 21 12:18:23 2019] POST /xx.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /s.php
+[pid: 8749|app: 0|req: 51/51] 106.12.112.59 () {38 vars in 585 bytes} [Thu Feb 21 12:18:23 2019] POST /s.php => generated 3587 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /w.php
+[pid: 8749|app: 0|req: 52/52] 106.12.112.59 () {38 vars in 585 bytes} [Thu Feb 21 12:18:25 2019] POST /w.php => generated 3587 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /sheep.php
+[pid: 8749|app: 0|req: 53/53] 106.12.112.59 () {38 vars in 593 bytes} [Thu Feb 21 12:18:26 2019] POST /sheep.php => generated 3599 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /qaq.php
+[pid: 8749|app: 0|req: 54/54] 106.12.112.59 () {38 vars in 589 bytes} [Thu Feb 21 12:18:26 2019] POST /qaq.php => generated 3593 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /db.init.php
+[pid: 8749|app: 0|req: 55/55] 106.12.112.59 () {38 vars in 597 bytes} [Thu Feb 21 12:18:27 2019] POST /db.init.php => generated 3605 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /db__.init.php
+[pid: 8749|app: 0|req: 56/56] 106.12.112.59 () {38 vars in 601 bytes} [Thu Feb 21 12:18:29 2019] POST /db__.init.php => generated 3611 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /wp-admins.php
+[pid: 8749|app: 0|req: 57/57] 106.12.112.59 () {38 vars in 601 bytes} [Thu Feb 21 12:18:30 2019] POST /wp-admins.php => generated 3611 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /m.php
+[pid: 8749|app: 0|req: 58/58] 106.12.112.59 () {38 vars in 604 bytes} [Thu Feb 21 12:18:30 2019] POST /m.php?pbid=open => generated 3597 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /db_dataml.php
+[pid: 8749|app: 0|req: 59/59] 106.12.112.59 () {38 vars in 601 bytes} [Thu Feb 21 12:18:30 2019] POST /db_dataml.php => generated 3611 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /db_desql.php
+[pid: 8749|app: 0|req: 60/60] 106.12.112.59 () {38 vars in 599 bytes} [Thu Feb 21 12:18:31 2019] POST /db_desql.php => generated 3608 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /mx.php
+[pid: 8749|app: 0|req: 61/61] 106.12.112.59 () {38 vars in 587 bytes} [Thu Feb 21 12:18:31 2019] POST /mx.php => generated 3590 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /wshell.php
+[pid: 8749|app: 0|req: 62/62] 106.12.112.59 () {38 vars in 595 bytes} [Thu Feb 21 12:18:32 2019] POST /wshell.php => generated 3602 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /xshell.php
+[pid: 8749|app: 0|req: 63/63] 106.12.112.59 () {38 vars in 595 bytes} [Thu Feb 21 12:18:32 2019] POST /xshell.php => generated 3602 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /qq.php
+[pid: 8749|app: 0|req: 64/64] 106.12.112.59 () {38 vars in 587 bytes} [Thu Feb 21 12:18:33 2019] POST /qq.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /conflg.php
+[pid: 8749|app: 0|req: 65/65] 106.12.112.59 () {38 vars in 595 bytes} [Thu Feb 21 12:18:34 2019] POST /conflg.php => generated 3602 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /conflg.php
+[pid: 8749|app: 0|req: 66/66] 106.12.112.59 () {38 vars in 595 bytes} [Thu Feb 21 12:18:34 2019] POST /conflg.php => generated 3602 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /lindex.php
+[pid: 8749|app: 0|req: 67/67] 106.12.112.59 () {38 vars in 595 bytes} [Thu Feb 21 12:18:34 2019] POST /lindex.php => generated 3602 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /phpstudy.php
+[pid: 8749|app: 0|req: 68/68] 106.12.112.59 () {38 vars in 599 bytes} [Thu Feb 21 12:18:35 2019] POST /phpstudy.php => generated 3608 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpStudy.php
+[pid: 8749|app: 0|req: 69/69] 106.12.112.59 () {38 vars in 599 bytes} [Thu Feb 21 12:18:35 2019] POST /phpStudy.php => generated 3608 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /weixiao.php
+[pid: 8749|app: 0|req: 70/70] 106.12.112.59 () {38 vars in 597 bytes} [Thu Feb 21 12:18:36 2019] POST /weixiao.php => generated 3605 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /feixiang.php
+[pid: 8749|app: 0|req: 71/71] 106.12.112.59 () {38 vars in 599 bytes} [Thu Feb 21 12:18:36 2019] POST /feixiang.php => generated 3608 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /ak47.php
+[pid: 8749|app: 0|req: 72/72] 106.12.112.59 () {38 vars in 591 bytes} [Thu Feb 21 12:18:36 2019] POST /ak47.php => generated 3596 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /ak48.php
+[pid: 8749|app: 0|req: 73/73] 106.12.112.59 () {38 vars in 591 bytes} [Thu Feb 21 12:18:37 2019] POST /ak48.php => generated 3596 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /defect.php
+[pid: 8749|app: 0|req: 74/74] 106.12.112.59 () {38 vars in 595 bytes} [Thu Feb 21 12:18:49 2019] POST /defect.php => generated 3602 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /webslee.php
+[pid: 8749|app: 0|req: 75/75] 106.12.112.59 () {38 vars in 597 bytes} [Thu Feb 21 12:18:50 2019] POST /webslee.php => generated 3605 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /q.php
+[pid: 8749|app: 0|req: 76/76] 106.12.112.59 () {38 vars in 585 bytes} [Thu Feb 21 12:18:50 2019] POST /q.php => generated 3587 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /pe.php
+[pid: 8749|app: 0|req: 77/77] 106.12.112.59 () {38 vars in 587 bytes} [Thu Feb 21 12:18:53 2019] POST /pe.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /hm.php
+[pid: 8749|app: 0|req: 78/78] 106.12.112.59 () {38 vars in 587 bytes} [Thu Feb 21 12:18:54 2019] POST /hm.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /cainiao.php
+[pid: 8749|app: 0|req: 79/79] 106.12.112.59 () {38 vars in 597 bytes} [Thu Feb 21 12:18:54 2019] POST /cainiao.php => generated 3605 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /zuoshou.php
+[pid: 8749|app: 0|req: 80/80] 106.12.112.59 () {38 vars in 597 bytes} [Thu Feb 21 12:18:57 2019] POST /zuoshou.php => generated 3605 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /zuo.php
+[pid: 8749|app: 0|req: 81/81] 106.12.112.59 () {38 vars in 589 bytes} [Thu Feb 21 12:18:58 2019] POST /zuo.php => generated 3593 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /aotu.php
+[pid: 8749|app: 0|req: 82/82] 106.12.112.59 () {38 vars in 591 bytes} [Thu Feb 21 12:18:58 2019] POST /aotu.php => generated 3596 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /aotu7.php
+[pid: 8749|app: 0|req: 83/83] 106.12.112.59 () {38 vars in 593 bytes} [Thu Feb 21 12:18:58 2019] POST /aotu7.php => generated 3599 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /cmd.php
+[pid: 8749|app: 0|req: 84/84] 106.12.112.59 () {38 vars in 589 bytes} [Thu Feb 21 12:18:59 2019] POST /cmd.php => generated 3593 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /system.php
+[pid: 8749|app: 0|req: 85/85] 106.12.112.59 () {38 vars in 594 bytes} [Thu Feb 21 12:19:01 2019] POST /system.php => generated 3602 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /l6.php
+[pid: 8749|app: 0|req: 86/86] 106.12.112.59 () {38 vars in 586 bytes} [Thu Feb 21 12:19:02 2019] POST /l6.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /l7.php
+[pid: 8749|app: 0|req: 87/87] 106.12.112.59 () {38 vars in 586 bytes} [Thu Feb 21 12:19:02 2019] POST /l7.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /l8.php
+[pid: 8749|app: 0|req: 88/88] 106.12.112.59 () {38 vars in 586 bytes} [Thu Feb 21 12:19:02 2019] POST /l8.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /q.php
+[pid: 8749|app: 0|req: 89/89] 106.12.112.59 () {38 vars in 584 bytes} [Thu Feb 21 12:19:03 2019] POST /q.php => generated 3587 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /56.php
+[pid: 8749|app: 0|req: 90/90] 106.12.112.59 () {38 vars in 586 bytes} [Thu Feb 21 12:19:03 2019] POST /56.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 8749|app: 0|req: 91/91] 221.136.82.209 () {48 vars in 934 bytes} [Thu Feb 21 12:19:05 2019] GET /index/ => generated 11649 bytes in 36 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 1)
+Not Found: /mz.php
+[pid: 8749|app: 0|req: 92/92] 106.12.112.59 () {38 vars in 586 bytes} [Thu Feb 21 12:19:06 2019] POST /mz.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /xx.php
+[pid: 8749|app: 0|req: 93/93] 106.12.112.59 () {38 vars in 586 bytes} [Thu Feb 21 12:19:07 2019] POST /xx.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /yumo.php
+[pid: 8749|app: 0|req: 94/94] 106.12.112.59 () {38 vars in 590 bytes} [Thu Feb 21 12:19:07 2019] POST /yumo.php => generated 3596 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /min.php
+[pid: 8749|app: 0|req: 95/95] 106.12.112.59 () {38 vars in 588 bytes} [Thu Feb 21 12:19:07 2019] POST /min.php => generated 3593 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /wan.php
+[pid: 8749|app: 0|req: 96/96] 106.12.112.59 () {38 vars in 588 bytes} [Thu Feb 21 12:19:08 2019] POST /wan.php => generated 3593 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /wanan.php
+[pid: 8749|app: 0|req: 97/97] 106.12.112.59 () {38 vars in 592 bytes} [Thu Feb 21 12:19:09 2019] POST /wanan.php => generated 3599 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /ssaa.php
+[pid: 8749|app: 0|req: 98/98] 106.12.112.59 () {38 vars in 590 bytes} [Thu Feb 21 12:19:10 2019] POST /ssaa.php => generated 3596 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /qq.php
+[pid: 8749|app: 0|req: 99/99] 106.12.112.59 () {38 vars in 586 bytes} [Thu Feb 21 12:19:10 2019] POST /qq.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /aw.php
+[pid: 8749|app: 0|req: 100/100] 106.12.112.59 () {38 vars in 586 bytes} [Thu Feb 21 12:19:10 2019] POST /aw.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /12.php
+[pid: 8749|app: 0|req: 101/101] 106.12.112.59 () {38 vars in 586 bytes} [Thu Feb 21 12:19:11 2019] POST /12.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /hh.php
+[pid: 8749|app: 0|req: 102/102] 106.12.112.59 () {38 vars in 586 bytes} [Thu Feb 21 12:19:11 2019] POST /hh.php => generated 3590 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /ak.php
+[pid: 8749|app: 0|req: 103/103] 106.12.112.59 () {38 vars in 586 bytes} [Thu Feb 21 12:19:11 2019] POST /ak.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /ip.php
+[pid: 8749|app: 0|req: 104/104] 106.12.112.59 () {38 vars in 586 bytes} [Thu Feb 21 12:19:12 2019] POST /ip.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /infoo.php
+[pid: 8749|app: 0|req: 105/105] 106.12.112.59 () {38 vars in 592 bytes} [Thu Feb 21 12:19:13 2019] POST /infoo.php => generated 3599 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /qq.php
+[pid: 8749|app: 0|req: 106/106] 106.12.112.59 () {38 vars in 586 bytes} [Thu Feb 21 12:19:14 2019] POST /qq.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /qwe.php
+[pid: 8749|app: 0|req: 107/107] 106.12.112.59 () {38 vars in 588 bytes} [Thu Feb 21 12:19:14 2019] POST /qwe.php => generated 3593 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /1213.php
+[pid: 8749|app: 0|req: 108/108] 106.12.112.59 () {38 vars in 590 bytes} [Thu Feb 21 12:19:15 2019] POST /1213.php => generated 3596 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /post.php
+[pid: 8749|app: 0|req: 109/109] 106.12.112.59 () {38 vars in 590 bytes} [Thu Feb 21 12:19:15 2019] POST /post.php => generated 3596 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /aaaa.php
+[pid: 8749|app: 0|req: 110/110] 106.12.112.59 () {38 vars in 590 bytes} [Thu Feb 21 12:19:15 2019] POST /aaaa.php => generated 3596 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /h1.php
+[pid: 8749|app: 0|req: 111/111] 106.12.112.59 () {38 vars in 586 bytes} [Thu Feb 21 12:19:16 2019] POST /h1.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /3.php
+[pid: 8749|app: 0|req: 112/112] 106.12.112.59 () {38 vars in 584 bytes} [Thu Feb 21 12:19:18 2019] POST /3.php => generated 3587 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpinfi.php
+[pid: 8749|app: 0|req: 113/113] 106.12.112.59 () {38 vars in 596 bytes} [Thu Feb 21 12:19:18 2019] POST /phpinfi.php => generated 3605 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /9510.php
+[pid: 8749|app: 0|req: 114/114] 106.12.112.59 () {38 vars in 590 bytes} [Thu Feb 21 12:19:19 2019] POST /9510.php => generated 3596 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /python.php
+[pid: 8749|app: 0|req: 115/115] 106.12.112.59 () {38 vars in 594 bytes} [Thu Feb 21 12:19:19 2019] POST /python.php => generated 3602 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /default.php
+[pid: 8749|app: 0|req: 116/116] 106.12.112.59 () {38 vars in 596 bytes} [Thu Feb 21 12:19:19 2019] POST /default.php => generated 3605 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /sean.php
+[pid: 8749|app: 0|req: 117/117] 106.12.112.59 () {38 vars in 590 bytes} [Thu Feb 21 12:19:20 2019] POST /sean.php => generated 3596 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /app.php
+[pid: 8749|app: 0|req: 118/118] 106.12.112.59 () {38 vars in 588 bytes} [Thu Feb 21 12:19:20 2019] POST /app.php => generated 3593 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /help.php
+[pid: 8749|app: 0|req: 119/119] 106.12.112.59 () {38 vars in 590 bytes} [Thu Feb 21 12:19:21 2019] POST /help.php => generated 3596 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /xz.php
+[pid: 8749|app: 0|req: 120/120] 106.12.112.59 () {38 vars in 586 bytes} [Thu Feb 21 12:19:29 2019] POST /xz.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /linuxse.php
+[pid: 8749|app: 0|req: 121/121] 106.12.112.59 () {38 vars in 596 bytes} [Thu Feb 21 12:19:30 2019] POST /linuxse.php => generated 3605 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /zuoindex.php
+[pid: 8749|app: 0|req: 122/122] 106.12.112.59 () {38 vars in 598 bytes} [Thu Feb 21 12:19:33 2019] POST /zuoindex.php => generated 3608 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /zshmindex.php
+[pid: 8749|app: 0|req: 123/123] 106.12.112.59 () {38 vars in 600 bytes} [Thu Feb 21 12:19:34 2019] POST /zshmindex.php => generated 3611 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /tomcat.php
+[pid: 8749|app: 0|req: 124/124] 106.12.112.59 () {38 vars in 594 bytes} [Thu Feb 21 12:19:34 2019] POST /tomcat.php => generated 3602 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /ceshi.php
+[pid: 8749|app: 0|req: 125/125] 106.12.112.59 () {38 vars in 592 bytes} [Thu Feb 21 12:19:34 2019] POST /ceshi.php => generated 3599 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /1hou.php
+[pid: 8749|app: 0|req: 126/126] 106.12.112.59 () {38 vars in 590 bytes} [Thu Feb 21 12:19:35 2019] POST /1hou.php => generated 3596 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /zuos.php
+[pid: 8749|app: 0|req: 127/127] 106.12.112.59 () {38 vars in 590 bytes} [Thu Feb 21 12:19:37 2019] POST /zuos.php => generated 3596 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /zuoss.php
+[pid: 8749|app: 0|req: 128/128] 106.12.112.59 () {38 vars in 592 bytes} [Thu Feb 21 12:19:38 2019] POST /zuoss.php => generated 3599 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /zuoshss.php
+[pid: 8749|app: 0|req: 129/129] 106.12.112.59 () {38 vars in 596 bytes} [Thu Feb 21 12:19:38 2019] POST /zuoshss.php => generated 3605 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /boots.php
+[pid: 8749|app: 0|req: 130/130] 106.12.112.59 () {38 vars in 593 bytes} [Thu Feb 21 12:19:38 2019] POST /boots.php => generated 3599 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /she.php
+[pid: 8749|app: 0|req: 131/131] 106.12.112.59 () {38 vars in 589 bytes} [Thu Feb 21 12:19:39 2019] POST /she.php => generated 3593 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /s.php
+[pid: 8749|app: 0|req: 132/132] 106.12.112.59 () {38 vars in 585 bytes} [Thu Feb 21 12:19:39 2019] POST /s.php => generated 3587 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /qw.php
+[pid: 8749|app: 0|req: 133/133] 106.12.112.59 () {38 vars in 587 bytes} [Thu Feb 21 12:19:40 2019] POST /qw.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /test.php
+[pid: 8749|app: 0|req: 134/134] 106.12.112.59 () {38 vars in 591 bytes} [Thu Feb 21 12:19:40 2019] POST /test.php => generated 3596 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /caonma.php
+[pid: 8749|app: 0|req: 135/135] 106.12.112.59 () {38 vars in 595 bytes} [Thu Feb 21 12:19:41 2019] POST /caonma.php => generated 3602 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /ss.php
+[pid: 8749|app: 0|req: 136/136] 106.12.112.59 () {38 vars in 587 bytes} [Thu Feb 21 12:19:42 2019] POST /ss.php => generated 3590 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /wcp.php
+[pid: 8749|app: 0|req: 137/137] 106.12.112.59 () {38 vars in 589 bytes} [Thu Feb 21 12:19:42 2019] POST /wcp.php => generated 3593 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /u.php
+[pid: 8749|app: 0|req: 138/138] 106.12.112.59 () {38 vars in 585 bytes} [Thu Feb 21 12:19:43 2019] POST /u.php => generated 3587 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /uuu.php
+[pid: 8749|app: 0|req: 139/139] 106.12.112.59 () {38 vars in 589 bytes} [Thu Feb 21 12:19:43 2019] POST /uuu.php => generated 3593 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /sss.php
+[pid: 8749|app: 0|req: 140/140] 106.12.112.59 () {38 vars in 589 bytes} [Thu Feb 21 12:19:43 2019] POST /sss.php => generated 3593 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /1.php
+[pid: 8749|app: 0|req: 141/141] 106.12.112.59 () {38 vars in 585 bytes} [Thu Feb 21 12:19:44 2019] POST /1.php => generated 3587 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /2.php
+[pid: 8749|app: 0|req: 142/142] 106.12.112.59 () {38 vars in 585 bytes} [Thu Feb 21 12:19:45 2019] POST /2.php => generated 3587 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /core.php
+[pid: 8749|app: 0|req: 143/143] 106.12.112.59 () {38 vars in 591 bytes} [Thu Feb 21 12:19:46 2019] POST /core.php => generated 3596 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /qaz.php
+[pid: 8749|app: 0|req: 144/144] 106.12.112.59 () {38 vars in 589 bytes} [Thu Feb 21 12:19:46 2019] POST /qaz.php => generated 3593 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /sha.php
+[pid: 8749|app: 0|req: 145/145] 106.12.112.59 () {38 vars in 589 bytes} [Thu Feb 21 12:19:46 2019] POST /sha.php => generated 3593 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /ppx.php
+[pid: 8749|app: 0|req: 146/146] 106.12.112.59 () {38 vars in 589 bytes} [Thu Feb 21 12:19:47 2019] POST /ppx.php => generated 3593 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /1.php
+[pid: 8749|app: 0|req: 147/147] 106.12.112.59 () {38 vars in 585 bytes} [Thu Feb 21 12:19:47 2019] POST /1.php => generated 3587 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /confg.php
+[pid: 8749|app: 0|req: 148/148] 106.12.112.59 () {38 vars in 593 bytes} [Thu Feb 21 12:19:48 2019] POST /confg.php => generated 3599 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /conf1g.php
+[pid: 8749|app: 0|req: 149/149] 106.12.112.59 () {38 vars in 595 bytes} [Thu Feb 21 12:19:48 2019] POST /conf1g.php => generated 3602 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /confg.php
+[pid: 8749|app: 0|req: 150/150] 106.12.112.59 () {38 vars in 593 bytes} [Thu Feb 21 12:19:49 2019] POST /confg.php => generated 3599 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /confg.php
+[pid: 8749|app: 0|req: 151/151] 106.12.112.59 () {38 vars in 593 bytes} [Thu Feb 21 12:19:49 2019] POST /confg.php => generated 3599 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /pma/index.php
+[pid: 8749|app: 0|req: 152/152] 106.12.112.59 () {34 vars in 528 bytes} [Thu Feb 21 12:20:13 2019] GET /pma/index.php => generated 3610 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /PMA/index.php
+[pid: 8749|app: 0|req: 153/153] 106.12.112.59 () {34 vars in 528 bytes} [Thu Feb 21 12:20:14 2019] GET /PMA/index.php => generated 3610 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /PMA2/index.php
+[pid: 8749|app: 0|req: 154/154] 106.12.112.59 () {34 vars in 530 bytes} [Thu Feb 21 12:20:14 2019] GET /PMA2/index.php => generated 3613 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /pmamy/index.php
+[pid: 8749|app: 0|req: 155/155] 106.12.112.59 () {34 vars in 532 bytes} [Thu Feb 21 12:20:17 2019] GET /pmamy/index.php => generated 3616 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /pmamy2/index.php
+[pid: 8749|app: 0|req: 156/156] 106.12.112.59 () {34 vars in 534 bytes} [Thu Feb 21 12:20:18 2019] GET /pmamy2/index.php => generated 3619 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /mysql/index.php
+[pid: 8749|app: 0|req: 157/157] 106.12.112.59 () {34 vars in 532 bytes} [Thu Feb 21 12:20:18 2019] GET /mysql/index.php => generated 3616 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /admin/index.php
+[pid: 8749|app: 0|req: 158/158] 106.12.112.59 () {34 vars in 532 bytes} [Thu Feb 21 12:20:18 2019] GET /admin/index.php => generated 6205 bytes in 10 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /db/index.php
+[pid: 8749|app: 0|req: 159/159] 106.12.112.59 () {34 vars in 526 bytes} [Thu Feb 21 12:20:19 2019] GET /db/index.php => generated 3607 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /web/phpMyAdmin/index.php
+[pid: 8749|app: 0|req: 160/160] 106.12.112.59 () {34 vars in 550 bytes} [Thu Feb 21 12:20:21 2019] GET /web/phpMyAdmin/index.php => generated 3643 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /admin/pma/index.php
+[pid: 8749|app: 0|req: 161/161] 106.12.112.59 () {34 vars in 540 bytes} [Thu Feb 21 12:20:22 2019] GET /admin/pma/index.php => generated 6217 bytes in 10 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /admin/PMA/index.php
+[pid: 8749|app: 0|req: 162/162] 106.12.112.59 () {34 vars in 540 bytes} [Thu Feb 21 12:20:22 2019] GET /admin/PMA/index.php => generated 6217 bytes in 10 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /admin/mysql/index.php
+[pid: 8749|app: 0|req: 163/163] 106.12.112.59 () {34 vars in 544 bytes} [Thu Feb 21 12:20:24 2019] GET /admin/mysql/index.php => generated 6223 bytes in 11 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /admin/mysql2/index.php
+[pid: 8749|app: 0|req: 164/164] 106.12.112.59 () {34 vars in 546 bytes} [Thu Feb 21 12:20:24 2019] GET /admin/mysql2/index.php => generated 6226 bytes in 10 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /admin/phpmyadmin/index.php
+[pid: 8749|app: 0|req: 165/165] 106.12.112.59 () {34 vars in 554 bytes} [Thu Feb 21 12:20:26 2019] GET /admin/phpmyadmin/index.php => generated 6238 bytes in 12 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /admin/phpMyAdmin/index.php
+[pid: 8749|app: 0|req: 166/166] 106.12.112.59 () {34 vars in 554 bytes} [Thu Feb 21 12:20:27 2019] GET /admin/phpMyAdmin/index.php => generated 6238 bytes in 10 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /admin/phpmyadmin2/index.php
+[pid: 8749|app: 0|req: 167/167] 106.12.112.59 () {34 vars in 556 bytes} [Thu Feb 21 12:20:27 2019] GET /admin/phpmyadmin2/index.php => generated 6241 bytes in 9 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /mysqladmin/index.php
+[pid: 8749|app: 0|req: 168/168] 106.12.112.59 () {34 vars in 542 bytes} [Thu Feb 21 12:20:27 2019] GET /mysqladmin/index.php => generated 3631 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /mysql-admin/index.php
+[pid: 8749|app: 0|req: 169/169] 106.12.112.59 () {34 vars in 544 bytes} [Thu Feb 21 12:20:28 2019] GET /mysql-admin/index.php => generated 3634 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /mysql_admin/index.php
+[pid: 8749|app: 0|req: 170/170] 106.12.112.59 () {34 vars in 544 bytes} [Thu Feb 21 12:20:29 2019] GET /mysql_admin/index.php => generated 3634 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpadmin/index.php
+[pid: 8749|app: 0|req: 171/171] 106.12.112.59 () {34 vars in 538 bytes} [Thu Feb 21 12:20:30 2019] GET /phpadmin/index.php => generated 3625 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /phpAdmin/index.php
+[pid: 8749|app: 0|req: 172/172] 106.12.112.59 () {34 vars in 538 bytes} [Thu Feb 21 12:20:30 2019] GET /phpAdmin/index.php => generated 3625 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpmyadmin0/index.php
+[pid: 8749|app: 0|req: 173/173] 106.12.112.59 () {34 vars in 544 bytes} [Thu Feb 21 12:20:30 2019] GET /phpmyadmin0/index.php => generated 3634 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /phpmyadmin1/index.php
+[pid: 8749|app: 0|req: 174/174] 106.12.112.59 () {34 vars in 544 bytes} [Thu Feb 21 12:20:31 2019] GET /phpmyadmin1/index.php => generated 3634 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpmyadmin2/index.php
+[pid: 8749|app: 0|req: 175/175] 106.12.112.59 () {34 vars in 544 bytes} [Thu Feb 21 12:20:31 2019] GET /phpmyadmin2/index.php => generated 3634 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /phpMyAdmin-4.4.0/index.php
+[pid: 8749|app: 0|req: 176/176] 106.12.112.59 () {34 vars in 554 bytes} [Thu Feb 21 12:20:32 2019] GET /phpMyAdmin-4.4.0/index.php => generated 3649 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /myadmin/index.php
+[pid: 8749|app: 0|req: 177/177] 106.12.112.59 () {34 vars in 536 bytes} [Thu Feb 21 12:20:32 2019] GET /myadmin/index.php => generated 3622 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /myadmin2/index.php
+[pid: 8749|app: 0|req: 178/178] 106.12.112.59 () {34 vars in 538 bytes} [Thu Feb 21 12:20:33 2019] GET /myadmin2/index.php => generated 3625 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /xampp/phpmyadmin/index.php
+[pid: 8749|app: 0|req: 179/179] 106.12.112.59 () {34 vars in 554 bytes} [Thu Feb 21 12:20:34 2019] GET /xampp/phpmyadmin/index.php => generated 3649 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /phpMyadmin_bak/index.php
+[pid: 8749|app: 0|req: 180/180] 106.12.112.59 () {34 vars in 550 bytes} [Thu Feb 21 12:20:34 2019] GET /phpMyadmin_bak/index.php => generated 3643 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /www/phpMyAdmin/index.php
+[pid: 8749|app: 0|req: 181/181] 106.12.112.59 () {34 vars in 550 bytes} [Thu Feb 21 12:20:34 2019] GET /www/phpMyAdmin/index.php => generated 3643 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /tools/phpMyAdmin/index.php
+[pid: 8749|app: 0|req: 182/182] 106.12.112.59 () {34 vars in 554 bytes} [Thu Feb 21 12:20:35 2019] GET /tools/phpMyAdmin/index.php => generated 3649 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpmyadmin-old/index.php
+[pid: 8749|app: 0|req: 183/183] 106.12.112.59 () {34 vars in 550 bytes} [Thu Feb 21 12:20:35 2019] GET /phpmyadmin-old/index.php => generated 3643 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /phpMyAdminold/index.php
+[pid: 8749|app: 0|req: 184/184] 106.12.112.59 () {34 vars in 548 bytes} [Thu Feb 21 12:20:36 2019] GET /phpMyAdminold/index.php => generated 3640 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /pma-old/index.php
+[pid: 8749|app: 0|req: 185/185] 106.12.112.59 () {34 vars in 536 bytes} [Thu Feb 21 12:20:37 2019] GET /pma-old/index.php => generated 3622 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /claroline/phpMyAdmin/index.php
+[pid: 8749|app: 0|req: 186/186] 106.12.112.59 () {34 vars in 562 bytes} [Thu Feb 21 12:20:38 2019] GET /claroline/phpMyAdmin/index.php => generated 3661 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /typo3/phpmyadmin/index.php
+[pid: 8749|app: 0|req: 187/187] 106.12.112.59 () {34 vars in 554 bytes} [Thu Feb 21 12:20:38 2019] GET /typo3/phpmyadmin/index.php => generated 3649 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /phpma/index.php
+[pid: 8749|app: 0|req: 188/188] 106.12.112.59 () {34 vars in 532 bytes} [Thu Feb 21 12:20:38 2019] GET /phpma/index.php => generated 3616 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpmyadmin/phpmyadmin/index.php
+[pid: 8749|app: 0|req: 189/189] 106.12.112.59 () {34 vars in 564 bytes} [Thu Feb 21 12:20:39 2019] GET /phpmyadmin/phpmyadmin/index.php => generated 3664 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /phpMyAdmin/phpMyAdmin/index.php
+[pid: 8749|app: 0|req: 190/190] 106.12.112.59 () {34 vars in 564 bytes} [Thu Feb 21 12:20:39 2019] GET /phpMyAdmin/phpMyAdmin/index.php => generated 3664 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAbmin/index.php
+[pid: 8749|app: 0|req: 191/191] 106.12.112.59 () {34 vars in 542 bytes} [Thu Feb 21 12:20:39 2019] GET /phpMyAbmin/index.php => generated 3631 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /phpMyAdmin__/index.php
+[pid: 8749|app: 0|req: 192/192] 106.12.112.59 () {34 vars in 546 bytes} [Thu Feb 21 12:20:40 2019] GET /phpMyAdmin__/index.php => generated 3637 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin+++---/index.php
+[pid: 8749|app: 0|req: 193/193] 106.12.112.59 () {34 vars in 554 bytes} [Thu Feb 21 12:20:40 2019] GET /phpMyAdmin+++---/index.php => generated 3649 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /v/index.php
+[pid: 8749|app: 0|req: 194/194] 106.12.112.59 () {34 vars in 524 bytes} [Thu Feb 21 12:20:41 2019] GET /v/index.php => generated 3604 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shaAdmin/index.php
+[pid: 8749|app: 0|req: 195/195] 106.12.112.59 () {34 vars in 538 bytes} [Thu Feb 21 12:20:49 2019] GET /shaAdmin/index.php => generated 3625 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /phpMyAdmion/index.php
+[pid: 8749|app: 0|req: 196/196] 106.12.112.59 () {34 vars in 544 bytes} [Thu Feb 21 12:20:53 2019] GET /phpMyAdmion/index.php => generated 3634 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /s/index.php
+[pid: 8749|app: 0|req: 197/197] 106.12.112.59 () {34 vars in 524 bytes} [Thu Feb 21 12:20:54 2019] GET /s/index.php => generated 3604 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /MyAdmin/index.php
+[pid: 8749|app: 0|req: 198/198] 106.12.112.59 () {34 vars in 536 bytes} [Thu Feb 21 12:20:54 2019] GET /MyAdmin/index.php => generated 3622 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin1/index.php
+[pid: 8749|app: 0|req: 199/199] 106.12.112.59 () {34 vars in 544 bytes} [Thu Feb 21 12:20:57 2019] GET /phpMyAdmin1/index.php => generated 3634 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /phpMyAdmin123/index.php
+[pid: 8749|app: 0|req: 200/200] 106.12.112.59 () {34 vars in 548 bytes} [Thu Feb 21 12:20:58 2019] GET /phpMyAdmin123/index.php => generated 3640 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /pwd/index.php
+[pid: 8749|app: 0|req: 201/201] 106.12.112.59 () {34 vars in 528 bytes} [Thu Feb 21 12:20:58 2019] GET /pwd/index.php => generated 3610 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /phpMyAdmina/index.php
+[pid: 8749|app: 0|req: 202/202] 106.12.112.59 () {34 vars in 544 bytes} [Thu Feb 21 12:20:59 2019] GET /phpMyAdmina/index.php => generated 3634 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMydmin/index.php
+[pid: 8749|app: 0|req: 203/203] 106.12.112.59 () {34 vars in 540 bytes} [Thu Feb 21 12:20:59 2019] GET /phpMydmin/index.php => generated 3628 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /phpMyAdmins/index.php
+[pid: 8749|app: 0|req: 204/204] 106.12.112.59 () {34 vars in 544 bytes} [Thu Feb 21 12:21:01 2019] GET /phpMyAdmins/index.php => generated 3634 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /program/index.php
+[pid: 8749|app: 0|req: 205/205] 106.12.112.59 () {34 vars in 536 bytes} [Thu Feb 21 12:21:02 2019] GET /program/index.php => generated 3622 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /shopdb/index.php
+[pid: 8749|app: 0|req: 206/206] 106.12.112.59 () {34 vars in 534 bytes} [Thu Feb 21 12:21:02 2019] GET /shopdb/index.php => generated 3619 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phppma/index.php
+[pid: 8749|app: 0|req: 207/207] 106.12.112.59 () {34 vars in 534 bytes} [Thu Feb 21 12:21:02 2019] GET /phppma/index.php => generated 3619 bytes in 9 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /phpmy/index.php
+[pid: 8749|app: 0|req: 208/208] 106.12.112.59 () {34 vars in 532 bytes} [Thu Feb 21 12:21:03 2019] GET /phpmy/index.php => generated 3616 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /mysql/dbadmin/index.php
+[pid: 8749|app: 0|req: 209/209] 106.12.112.59 () {34 vars in 548 bytes} [Thu Feb 21 12:21:05 2019] GET /mysql/dbadmin/index.php => generated 3640 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /mysql/sqlmanager/index.php
+[pid: 8749|app: 0|req: 210/210] 106.12.112.59 () {34 vars in 554 bytes} [Thu Feb 21 12:21:06 2019] GET /mysql/sqlmanager/index.php => generated 3649 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /mysql/mysqlmanager/index.php
+[pid: 8749|app: 0|req: 211/211] 106.12.112.59 () {34 vars in 558 bytes} [Thu Feb 21 12:21:06 2019] GET /mysql/mysqlmanager/index.php => generated 3655 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /wp-content/plugins/portable-phpmyadmin/wp-pma-mod/index.php
+[pid: 8749|app: 0|req: 212/212] 106.12.112.59 () {34 vars in 620 bytes} [Thu Feb 21 12:21:06 2019] GET /wp-content/plugins/portable-phpmyadmin/wp-pma-mod/index.php => generated 3748 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /manager/html
+[pid: 8749|app: 0|req: 213/213] 106.12.112.59 () {34 vars in 520 bytes} [Thu Feb 21 12:21:07 2019] GET /manager/html => generated 3607 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)

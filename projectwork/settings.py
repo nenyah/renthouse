@@ -25,7 +25,7 @@ SECRET_KEY = '1mhd!krh)ik(hs-6gomjpt1c5afyqfhm&)qor%fj$br0##m1x7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['104.129.183.20','localhost']
+ALLOWED_HOSTS = ['104.129.183.20','localhost','www.geekdata.shop','geekdata.shop']
 
 
 # Application definition
